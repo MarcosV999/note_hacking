@@ -19,7 +19,16 @@ openssl s_client -crlf \
 -servername localhost
 
 password bandit 16 = kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
-
 > [!Done]- Comando utilizado para conseguir la siguiente clave 
 nmap -p31000-32000 -T4 -vvv -n localhost
 openssl s_client -crlf -quiet -connect localhost:31790 -servername localhost
+
+password bandit 17 = key_level17.private
+> [!Done]- Comando utilizado para conseguir la siguiente clave 
+>diff pasword.new password.old 
+
+password bandit 18 = x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+> [!Done]- Comando utilizado para conseguir la siguiente clave 
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+password bandit 19 = cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
