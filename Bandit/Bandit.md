@@ -13,22 +13,30 @@ password bandit 12 = 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 password bandit 13 = FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 password bandit 14 = MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 password bandit 15 = 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
-> [!Done]- Comando utilizado para conseguir la siguiente clave 
-openssl s_client -crlf \
+> [!Done]- [+] SOLUTION
+ openssl s_client -crlf \
 -connect localhost:30001 \
 -servername localhost
 
 password bandit 16 = kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
-> [!Done]- Comando utilizado para conseguir la siguiente clave 
+> [!Done]- [+] SOLUTION
 nmap -p31000-32000 -T4 -vvv -n localhost
 openssl s_client -crlf -quiet -connect localhost:31790 -servername localhost
 
 password bandit 17 = key_level17.private
-> [!Done]- Comando utilizado para conseguir la siguiente clave 
+> [!Done]- [+] SOLUTION
 >diff pasword.new password.old 
 
 password bandit 18 = x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
-> [!Done]- Comando utilizado para conseguir la siguiente clave 
+> [!Done]- [+] SOLUTION
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
 
 password bandit 19 = cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+> [!Done]- [+] SOLUTION
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+password bandit 20 = 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+> [!Done]- [+] SOLUTION
+> echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -lp 1234 &
+
+password bandit 21 = EeoULMCra2q0dSkYj561DX7s1CpBuOBt
