@@ -62,3 +62,19 @@ cp /tmp/script_bandit23.sh /var/spool/bandit24/foo/
 cat /tmp/my_password_24.txt
 
 password bandit 24 = gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+> [!Done]- [+] SOLUTION
+cd /tmp
+nano script_bandit24.sh && chmod +x script_bandit24.sh
+./script_bandit24.sh
+
+password bandit 25 = iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+
+password bandit 26 = key_level26.private
+
+password bandit 27 = upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+
+password bandit 28 = Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+
+password bandit 29 = 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+
+password bandit 30 = qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL

