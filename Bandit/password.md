@@ -78,3 +78,9 @@ password bandit 28 = Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
 password bandit 29 = 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
 
 password bandit 30 = qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+
+password bandit 31 = fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+
+password bandit 32 = 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+
+password bandit 33 = tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
