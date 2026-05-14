@@ -1,4 +1,4 @@
-# Operating System Structure
+cc# Operating System Structure
 In Windows operating systems, the root directory is <drive_letter>:\ (commonly C drive). The root directory (also known as the boot partition) is where the operating system is installed.
 ## Exploring Directories Using Command Line
 We can explore the file system using the [dir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir) command.

@@ -8,133 +8,63 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e3c15f37b4472730",
+            "id": "7fb2890c40f8ee06",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Linux Fundamentals/The shell.md",
+                "file": "CJCA/Introduction to Web Applications/Back End Vulnerabilities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The shell"
+              "title": "Back End Vulnerabilities"
             }
           },
           {
-            "id": "f9e4c1a22fdd583d",
+            "id": "2f38c894578e9873",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Linux Fundamentals/The shell.md",
+                "file": "CJCA/Introduction to Penetration Testing/Fundamentals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The shell"
+              "title": "Fundamentals"
             }
           },
           {
-            "id": "28042b8e0fe24815",
+            "id": "228078a7b4a17904",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Linux Fundamentals/System Managment.md",
+                "file": "CJCA/Introduction to Penetration Testing/Penetration Test Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System Managment"
+              "title": "Penetration Test Overview"
             }
           },
           {
-            "id": "5ea7f7522d846355",
+            "id": "d0d871f399a4f2b8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Linux Fundamentals/Linux Networking.md",
+                "file": "CJCA/Introduction to Penetration Testing/Domains of Testing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Networking"
-            }
-          },
-          {
-            "id": "c4ba62352e27a3db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Linux Fundamentals/The shell.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "The shell"
-            }
-          },
-          {
-            "id": "75cfb77b217a713b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Windows Fundamentals/Core of the Operating System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Core of the Operating System"
-            }
-          },
-          {
-            "id": "3e35dffc898c43be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Windows Fundamentals/Working with Services and Processes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Working with Services and Processes"
-            }
-          },
-          {
-            "id": "c278dc45d31cf13f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Windows Fundamentals/Interacting with Windows.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Interacting with Windows"
-            }
-          },
-          {
-            "id": "1c8a74efd949576f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Futher Windows Usage.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Futher Windows Usage"
+              "title": "Domains of Testing"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -296,12 +226,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "1c8a74efd949576f",
+  "active": "cb9bf2a29d708d8d",
   "lastOpenFiles": [
+    "CJCA/Introduction to Penetration Testing/Penetration Test Overview.md",
+    "CJCA/Introduction to Penetration Testing/Domains of Testing.md",
+    "CJCA/Introduction to Penetration Testing/Fundamentals.md",
+    "Ideas de proyectos.md",
+    "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
+    "CJCA/Introduction to Web Applications/Back End Vulnerabilities.md",
+    "CJCA/Introduction to Penetration Testing",
+    "CJCA/Introduction to Web Applications/Front End Vulnerabilities.md",
+    "README.md",
+    "Protocolos and Terminology.md",
+    "SQLi (SQL injection).md",
+    "notas.md",
+    "CJCA/Web Requests/HTTP Methods.md",
+    "CJCA/Introduction to Web Applications",
+    "CJCA/Web Requests/HTTP Fundamentals.md",
+    "CJCA/Web Requests/HTTP RESPONSE.png",
+    "CJCA/Web Requests/HTTP REQUEST.png",
+    "CJCA/Web Requests/URL.png",
+    "CJCA/Windows Fundamentals/Utilities.md",
+    "CJCA/Web Requests",
     "CJCA/Windows Fundamentals/Interacting with Windows.md",
-    "Futher Windows Usage.md",
     "CJCA/Windows Fundamentals/Working with Services and Processes.md",
+    "CJCA/Windows Fundamentals/Futher Windows Usage.md",
+    "CJCA/Windows Fundamentals/Diving Deeper & Close Out.md",
     "CJCA/Windows Fundamentals/Core of the Operating System.md",
+    "CISCO - Ethical Hacker.md",
     "CJCA/Linux Fundamentals/The shell.md",
     "CJCA/Windows Fundamentals",
     "CJCA/Linux Fundamentals/Linux Hardening.md",
@@ -310,33 +262,16 @@
     "CJCA/Linux Fundamentals/Linux Structured.md",
     "Linux/Linux permissions.md",
     "Linux/Switch user.md",
-    "CJCA/Network Foundations/Network Security and Data Flow Analysis.md",
-    "CJCA/Network Foundations/Network Communication and Addressing.md",
-    "CJCA/Network Foundations/Networking Fundamentals.md",
     "CJCA/Network Foundations/Data Flow Example.png",
-    "CJCA/Network Foundations/Internet Architecture and Wireless Technologies.md",
-    "CJCA/Introduction to Information Security/Threats.md",
-    "CJCA/Introduction to Information Security/Structure of InfoSec.md",
-    "CJCA/Introduction to Information Security/Job Roles.md",
-    "CJCA/Introduction to Information Security/InfoSec Domains.md",
-    "CJCA/Introduction to Information Security/Cybersecurity Teams.md",
-    "CJCA/Introduction to Networking/Networking Workflow.md",
-    "CJCA/Introduction to Networking/Networking Structure.md",
-    "CJCA/Introduction to Networking/Connection Establishment.md",
-    "CJCA/Introduction to Networking/Addressing.md",
     "CJCA/Linux Fundamentals",
     "CJCA/Introduction to Networking/PDU.png",
     "CJCA/Introduction to Networking/OSI_TCP_IP.png",
-    "Protocolos and Terminology.md",
-    "SQLi (SQL injection).md",
     "CJCA/Introduction to Networking",
     "CJCA/Introduction to Information Security",
     "Pasted image 20260501080420.png",
     "CJCA/Network Foundations",
     "CJCA",
     "Pasted image 20260422122729.png",
-    "Bandit",
-    "Linux",
-    "Enumeration"
+    "Bandit"
   ]
 }
