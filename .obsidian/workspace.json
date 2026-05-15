@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Introduction to Penetration Testing/Domains of Testing.md",
+                "file": "CJCA/Introduction to Penetration Testing/Daily Life.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domains of Testing"
+              "title": "Daily Life"
             }
           }
         ],
@@ -226,10 +226,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "cb9bf2a29d708d8d",
+  "active": "d0d871f399a4f2b8",
   "lastOpenFiles": [
+    "CJCA/Introduction to Penetration Testing/Technical Findings Details.png",
+    "CJCA/Introduction to Penetration Testing/Daily Life.md",
+    "Pasted image 20260514184124.png",
     "CJCA/Introduction to Penetration Testing/Penetration Test Overview.md",
-    "CJCA/Introduction to Penetration Testing/Domains of Testing.md",
     "CJCA/Introduction to Penetration Testing/Fundamentals.md",
     "Ideas de proyectos.md",
     "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
@@ -261,7 +263,6 @@
     "CJCA/Linux Fundamentals/System Managment.md",
     "CJCA/Linux Fundamentals/Linux Structured.md",
     "Linux/Linux permissions.md",
-    "Linux/Switch user.md",
     "CJCA/Network Foundations/Data Flow Example.png",
     "CJCA/Linux Fundamentals",
     "CJCA/Introduction to Networking/PDU.png",
@@ -271,7 +272,6 @@
     "Pasted image 20260501080420.png",
     "CJCA/Network Foundations",
     "CJCA",
-    "Pasted image 20260422122729.png",
     "Bandit"
   ]
 }
