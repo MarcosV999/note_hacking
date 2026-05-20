@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Pentest in a Nutshell/Windows Target.md",
+                "file": "CJCA/Pentest in a Nutshell/PoC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows Target"
+              "title": "PoC"
             }
           }
         ],
@@ -284,9 +284,11 @@
   },
   "active": "5fc8af63af874930",
   "lastOpenFiles": [
-    "CJCA/Pentest in a Nutshell/winpill.ps1",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
+    "CJCA/Pentest in a Nutshell/Assigned_PT_DRAFT.docx",
     "CJCA/Pentest in a Nutshell/Windows Target.md",
+    "CJCA/Pentest in a Nutshell/Linux Target.md",
+    "CJCA/Pentest in a Nutshell/PoC.md",
+    "CJCA/Pentest in a Nutshell/winpill.ps1",
     "CJCA/Pentest in a Nutshell/Network Information Gathering.md",
     "CJCA/Pentest in a Nutshell/Network Vulnerabilities Assessment.md",
     "CJCA/Pentest in a Nutshell/Pre-engagement.md",
@@ -320,7 +322,6 @@
     "CJCA/Windows Fundamentals/Utilities.md",
     "CJCA/Web Requests",
     "CJCA/Windows Fundamentals/Interacting with Windows.md",
-    "CJCA/Windows Fundamentals/Working with Services and Processes.md",
     "CJCA/Windows Fundamentals",
     "CJCA/Network Foundations/Data Flow Example.png",
     "CJCA/Linux Fundamentals",
@@ -328,7 +329,6 @@
     "CJCA/Introduction to Networking/OSI_TCP_IP.png",
     "CJCA/Introduction to Networking",
     "CJCA/Introduction to Information Security",
-    "Pasted image 20260501080420.png",
-    "CJCA/Network Foundations"
+    "Pasted image 20260501080420.png"
   ]
 }
