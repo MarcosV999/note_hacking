@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Pentest in a Nutshell/Linux Target.md",
+                "file": "CJCA/Pentest in a Nutshell/Windows Target.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Target"
+              "title": "Windows Target"
             }
           }
         ],
@@ -284,11 +284,18 @@
   },
   "active": "5fc8af63af874930",
   "lastOpenFiles": [
-    "Enumeration/WordPress.md",
+    "CJCA/Pentest in a Nutshell/winpill.ps1",
     "CJCA/Pentest in a Nutshell/Linux Target.md",
-    "CJCA/Pentest in a Nutshell/Network Vulnerabilities Assessment.md",
+    "CJCA/Pentest in a Nutshell/Windows Target.md",
     "CJCA/Pentest in a Nutshell/Network Information Gathering.md",
+    "CJCA/Pentest in a Nutshell/Network Vulnerabilities Assessment.md",
     "CJCA/Pentest in a Nutshell/Pre-engagement.md",
+    "CJCA/Linux Fundamentals/System Managment.md",
+    "CJCA/Pentest in a Nutshell/linpill.sh",
+    "CJCA/Linux Fundamentals/The shell.md",
+    "CJCA/Linux Fundamentals/Linux Networking.md",
+    "CJCA/Linux Fundamentals/Linux Hardening.md",
+    "Enumeration/WordPress.md",
     "CJCA/Introduction to Penetration Testing/Daily Life.md",
     "CJCA/Pentest in a Nutshell",
     "CJCA/Introduction to Penetration Testing/Technical Findings Details.png",
@@ -314,13 +321,7 @@
     "CJCA/Web Requests",
     "CJCA/Windows Fundamentals/Interacting with Windows.md",
     "CJCA/Windows Fundamentals/Working with Services and Processes.md",
-    "CJCA/Windows Fundamentals/Futher Windows Usage.md",
-    "CJCA/Windows Fundamentals/Diving Deeper & Close Out.md",
-    "CJCA/Windows Fundamentals/Core of the Operating System.md",
-    "CISCO - Ethical Hacker.md",
-    "CJCA/Linux Fundamentals/The shell.md",
     "CJCA/Windows Fundamentals",
-    "CJCA/Linux Fundamentals/Linux Hardening.md",
     "CJCA/Network Foundations/Data Flow Example.png",
     "CJCA/Linux Fundamentals",
     "CJCA/Introduction to Networking/PDU.png",
@@ -328,7 +329,6 @@
     "CJCA/Introduction to Networking",
     "CJCA/Introduction to Information Security",
     "Pasted image 20260501080420.png",
-    "CJCA/Network Foundations",
-    "CJCA"
+    "CJCA/Network Foundations"
   ]
 }
