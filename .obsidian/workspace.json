@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Using the Metasploit Framework/MSF Sessions.md",
+                "file": "CJCA/Using the Metasploit Framework/Additional Features.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MSF Sessions"
+              "title": "Additional Features"
             }
           }
         ]
@@ -185,8 +185,10 @@
   },
   "active": "151284c4f58024c7",
   "lastOpenFiles": [
-    "CJCA/Using the Metasploit Framework/MSF Components.md",
     "CJCA/Using the Metasploit Framework/MSF Sessions.md",
+    "CJCA/Using the Metasploit Framework/Additional Features.md",
+    "CJCA/Using the Metasploit Framework/MSF Components.md",
+    "CJCA/Pentest in a Nutshell/Linux Target.md",
     "CJCA/Using the Metasploit Framework/Introduction.md",
     "CJCA/Using the Metasploit Framework/MSF Engagement Structure.png",
     "CJCA/Using the Metasploit Framework",
@@ -199,7 +201,6 @@
     "CJCA/Introduction to Penetration Testing/Fundamentals.md",
     "CJCA/Pentest in a Nutshell/Assigned_PT_DRAFT.docx",
     "CJCA/Pentest in a Nutshell/Windows Target.md",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
     "CJCA/Pentest in a Nutshell/winpill.ps1",
     "CJCA/Linux Fundamentals/System Managment.md",
     "CJCA/Pentest in a Nutshell/linpill.sh",
@@ -221,7 +222,6 @@
     "notas.md",
     "CJCA/Web Requests/HTTP Methods.md",
     "CJCA/Introduction to Web Applications",
-    "CJCA/Web Requests/HTTP Fundamentals.md",
     "CJCA/Web Requests/HTTP RESPONSE.png",
     "CJCA/Web Requests/HTTP REQUEST.png",
     "CJCA/Web Requests/URL.png",
