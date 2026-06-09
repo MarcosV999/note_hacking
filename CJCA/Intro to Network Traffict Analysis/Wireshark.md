@@ -91,3 +91,7 @@ Applying a display filter is even easier than a capture filter. From the main Wi
 ![[Apply display filter.png]]
 
 When using capture and display filters, keep in mind that what we specify is taken in a literal sense. For example, filtering for port 80 traffic is not the same as filtering for HTTP. Think of ports and protocols more like guidelines instead of rigid rules. Ports can be bound and used for different purposes other than what they were originally intended. For example, filtering for HTTP will look for key markers that the protocol uses, such as GET/POST requests, and show results from them. Filtering for port 80 will show anything sent or received over that port regardless of the transport protocol.
+
+http://192.168.189.192:81/settings.html
+http://10.0.2.15:81/settings.html
+http://10.0.2.15:81/role.html

