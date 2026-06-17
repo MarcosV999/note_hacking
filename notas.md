@@ -1,4 +1,12 @@
 
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: ColddBox | One more machine
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-generator: WordPress 4.1.31
+
+
+
+
 ruta interesante:
 /usr/share/windows-resources/binaries/
 /usr/share/webshells/php

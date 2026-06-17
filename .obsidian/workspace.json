@@ -13,12 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "notas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "notas"
+            }
+          },
+          {
+            "id": "d9f1c53b92978d89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Windows/Powershell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Powershell"
+            }
+          },
+          {
+            "id": "e1c54f0db375dd45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Enumeration/WordPress.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WordPress"
+            }
+          },
+          {
+            "id": "f051c0cb0774fef4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Enumeration/Hydra.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hydra"
             }
           },
           {
@@ -33,6 +75,20 @@
               },
               "icon": "lucide-file",
               "title": "Writing Pentest Reports"
+            }
+          },
+          {
+            "id": "bbec5fe1d15ce7ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQLI/SQLi (SQL injection).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQLi (SQL injection)"
             }
           },
           {
@@ -77,7 +133,8 @@
               "title": "Linux Target"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -100,7 +157,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -230,25 +287,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
     }
   },
-  "active": "151284c4f58024c7",
+  "active": "f051c0cb0774fef4",
   "lastOpenFiles": [
-    "Protocolos and Terminology.md",
-    "README.md",
-    "Tools deprecade.md",
-    "CISCO - Ethical Hacker.md",
-    "Ideas de proyectos.md",
+    "Enumeration/WordPress.md",
+    "Enumeration/Hydra.md",
     "notas.md",
+    "Windows/Underthewire.md",
     "Windows/Powershell.md",
+    "CISCO - Ethical Hacker.md",
+    "Tools deprecade.md",
     "Windows",
+    "README.md",
     "writeup/cap/cap_htb.md",
     "writeup/cap/imgs/Pasted image 20260609114055.png",
     "writeup/cap/imgs/Pasted image 20260609105702.png",
@@ -261,10 +319,10 @@
     "Enumeration/SMB.md",
     "writeup/cap",
     "Enumeration/IMPACKET.md",
+    "Protocolos and Terminology.md",
     "vaccine_web.png",
     "Enumeration/NMAP.md",
     "Enumeration/Wireshark.md",
-    "Enumeration/WordPress.md",
     "Enumeration/FFUF.md",
     "Enumeration/FTP.md",
     "CJCA/Using the Metasploit Framework/MSF Components.md",
@@ -282,7 +340,6 @@
     "SQLI/sqlmap.md",
     "writeup",
     "Linux/Sudo.md",
-    "CJCA/Linux Fundamentals/Linux Hardening.md",
     "SQLI",
     "Reports",
     "CJCA/Intro to Network Traffict Analysis",
