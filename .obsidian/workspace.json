@@ -22,77 +22,7 @@
             }
           },
           {
-            "id": "d9f1c53b92978d89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Powershell.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Powershell"
-            }
-          },
-          {
-            "id": "e1c54f0db375dd45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Enumeration/WordPress.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "WordPress"
-            }
-          },
-          {
-            "id": "f051c0cb0774fef4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Enumeration/Hydra.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hydra"
-            }
-          },
-          {
-            "id": "661b078ebbce0e90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Reports/Writing Pentest Reports.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Writing Pentest Reports"
-            }
-          },
-          {
-            "id": "bbec5fe1d15ce7ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQLI/SQLi (SQL injection).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQLi (SQL injection)"
-            }
-          },
-          {
-            "id": "5d0604e8e2299942",
+            "id": "95fc8285ce353f3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -106,7 +36,7 @@
             }
           },
           {
-            "id": "95fc8285ce353f3e",
+            "id": "d7c19a01b3d54740",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -134,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -157,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -287,42 +217,45 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "f051c0cb0774fef4",
+  "active": "d7c19a01b3d54740",
   "lastOpenFiles": [
-    "Enumeration/WordPress.md",
-    "Enumeration/Hydra.md",
+    "writeup/notas checkpoint.md",
     "notas.md",
-    "Windows/Underthewire.md",
+    "Enumeration/SMB.md",
     "Windows/Powershell.md",
+    "Windows/Underthewire.md",
+    "Enumeration/Hydra.md",
+    "Enumeration/Netexec.md",
+    "Enumeration/NMAP.md",
+    "Reports/Writing Pentest Reports.md",
     "CISCO - Ethical Hacker.md",
+    "Ideas de proyectos.md",
+    "Protocolos and Terminology.md",
+    "README.md",
     "Tools deprecade.md",
     "Windows",
-    "README.md",
     "writeup/cap/cap_htb.md",
     "writeup/cap/imgs/Pasted image 20260609114055.png",
     "writeup/cap/imgs/Pasted image 20260609105702.png",
     "writeup/cap/imgs/Pasted image 20260609105646.png",
     "writeup/cap/imgs",
-    "Reports/Writing Pentest Reports.md",
     "SQLI/SQLi (SQL injection).md",
     "CJCA/Pentest in a Nutshell/Windows Target.md",
     "CJCA/Pentest in a Nutshell/Linux Target.md",
-    "Enumeration/SMB.md",
     "writeup/cap",
     "Enumeration/IMPACKET.md",
-    "Protocolos and Terminology.md",
     "vaccine_web.png",
-    "Enumeration/NMAP.md",
     "Enumeration/Wireshark.md",
+    "Enumeration/WordPress.md",
     "Enumeration/FFUF.md",
     "Enumeration/FTP.md",
     "CJCA/Using the Metasploit Framework/MSF Components.md",
@@ -335,11 +268,8 @@
     "vaccine_flag_root.png",
     "vaccine_root.png",
     "vaccine_privesc.png",
-    "writeup/Vaccine_linux_very_easy.md",
     "writeup/Vaccine",
-    "SQLI/sqlmap.md",
     "writeup",
-    "Linux/Sudo.md",
     "SQLI",
     "Reports",
     "CJCA/Intro to Network Traffict Analysis",
