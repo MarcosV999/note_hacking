@@ -16,6 +16,8 @@ Get-ADComputer -Identity $DC -Properties Description | Select-Object -ExpandProp
 **Get-Command** retrieves information about one or more commands, such a the name, category, version and even the module than contains it. **Get-Help** retrieves help content about the command. Those commands accept wildcards, such as the asterisk (\*). 
 ``` powershell
 Get-Command *command*
+Get-Command -verb get
+Get-Command -noun windows*
 Get-Help *command* -ShowWindow
 Get-Help *command* -Online
 ```
