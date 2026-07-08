@@ -8,4 +8,6 @@
     
 - No uses `service` ➡️ Usa **`systemctl`**
     
-- No uses crackmapexec ➡️ Usa **`netexec(nxc)`**
+- No uses `crackmapexec` ➡️ Usa **`netexec(nxc)`**
+      
+- No uses `enum4linux` ➡️ Usa **`enum4linux-ng`**

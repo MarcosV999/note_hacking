@@ -8,49 +8,63 @@
         "type": "tabs",
         "children": [
           {
-            "id": "151284c4f58024c7",
+            "id": "18cbd5e413786fb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notas.md",
+                "file": "Protocolos and Terminology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notas"
+              "title": "Protocolos and Terminology"
             }
           },
           {
-            "id": "28c8ea3180336bd6",
+            "id": "aad2d37c3e57ef88",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Introducction Windows Command Line/CMD.md",
+                "file": "Enumeration/SNMP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CMD"
+              "title": "SNMP"
             }
           },
           {
-            "id": "60daf38bc0a04b59",
+            "id": "84a5fcfff924bb84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Introducction Windows Command Line/CMD.md",
+                "file": "CJCA/Footprinting/Enumeration Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CMD"
+              "title": "Enumeration Methodology"
+            }
+          },
+          {
+            "id": "3300f826d650a4ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CJCA/Pentest in a Nutshell/Linux Target.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linux Target"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -203,62 +217,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "60daf38bc0a04b59",
+  "active": "aad2d37c3e57ef88",
   "lastOpenFiles": [
-    "CJCA/Introducction Windows Command Line/Powershell.md",
-    "Windows/Powershell.md",
-    "Windows/Underthewire.md",
-    "CJCA/Introducction Windows Command Line/CMD.md",
+    "Enumeration/SMTP.md",
+    "Enumeration/IMAP - POP3.md",
+    "Enumeration/SNMP.md",
+    "Enumeration/NFS.md",
+    "Enumeration/Windows Remote Management Protocols.md",
+    "Enumeration/SMB.md",
+    "Enumeration/NMAP.md",
+    "Enumeration/DNS.md",
+    "Enumeration/SSH.md",
+    "CJCA/Footprinting/Enumeration Methodology.md",
+    "Default Configuration.md",
+    "Enumeration/IPMI.md",
+    "Enumeration/Oracle TNS.md",
+    "Enumeration/MSSQL.md",
+    "Enumeration/MYSQL.md",
+    "SQLI/SQLi (SQL injection).md",
+    "SQLi.md",
+    "Protocolos and Terminology.md",
+    "Ideas de proyectos.md",
+    "CISCO - Ethical Hacker.md",
     "SQLI/sqlmap.md",
+    "notas.md",
+    "Tools deprecade.md",
+    "Enumeration/FTP.md",
+    "Enumeration/Untitled",
+    "Enumeration/FFUF.md",
+    "Enumeration/Hydra.md",
+    "CJCA/Footprinting/imgs/Pasted image 20260627220748.png",
+    "CJCA/Footprinting/imgs/Pasted image 20260626163142.png",
+    "CJCA/Footprinting/imgs/Pasted image 20260626163140.png",
+    "CJCA/Footprinting/imgs",
+    "CJCA/Footprinting",
+    "Enumeration/imgs/nmap_xml_browser.png",
+    "Enumeration/imgs",
     "CJCA/Introducction Windows Command Line/imgs/Pasted image 20260620141646.png",
     "CJCA/Introducction Windows Command Line/imgs",
-    "Enumeration/SMB.md",
     "CJCA/Introducction Windows Command Line",
-    "writeup/notas checkpoint.md",
-    "writeup",
-    "Enumeration/Hydra.md",
-    "Enumeration/WordPress.md",
-    "notas.md",
-    "CISCO - Ethical Hacker.md",
-    "Tools deprecade.md",
     "Windows",
-    "README.md",
-    "writeup/cap/cap_htb.md",
     "writeup/cap/imgs/Pasted image 20260609114055.png",
     "writeup/cap/imgs/Pasted image 20260609105702.png",
     "writeup/cap/imgs/Pasted image 20260609105646.png",
     "writeup/cap/imgs",
-    "Reports/Writing Pentest Reports.md",
-    "SQLI/SQLi (SQL injection).md",
-    "CJCA/Pentest in a Nutshell/Windows Target.md",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
     "writeup/cap",
-    "Enumeration/IMPACKET.md",
-    "Protocolos and Terminology.md",
     "vaccine_web.png",
-    "Enumeration/NMAP.md",
-    "Enumeration/Wireshark.md",
-    "Enumeration/FFUF.md",
-    "Enumeration/FTP.md",
-    "CJCA/Using the Metasploit Framework/MSF Components.md",
-    "CJCA/Using the Metasploit Framework/Introduction.md",
     "writeup/Vaccine/imgs/Pasted image 20260606124343.png",
-    "writeup/Vaccine/imgs/Pasted image 20260606101232.png",
-    "writeup/Vaccine/imgs",
-    "vaccine_ffuf.png",
-    "vaccine_flag_root.png",
-    "vaccine_root.png",
-    "writeup/Vaccine",
-    "SQLI",
-    "Reports"
+    "writeup/Vaccine/imgs"
   ]
 }
