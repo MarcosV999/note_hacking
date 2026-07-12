@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Windows Event Logs/Get-WinEvent.md",
+                "file": "CJCA/Introduction to Threat Hunting & Hunting With Elastic/Hunting For Stuxbot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Get-WinEvent"
+              "title": "Hunting For Stuxbot"
             }
           }
         ]
@@ -185,21 +185,26 @@
   },
   "active": "aad2d37c3e57ef88",
   "lastOpenFiles": [
+    "CJCA/Introduction to Threat Hunting & Hunting With Elastic/Threat Hunting Fundamentals.md",
+    "CJCA/Introduction to Threat Hunting & Hunting With Elastic/Hunting For Stuxbot.md",
+    "CJCA/Security Monitoring & SIEM Fundamentals/SIEM Definition & Fundamentals.md",
+    "CJCA/Introduction to Threat Hunting & Hunting With Elastic",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711154731.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711154717.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711154337.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711154334 1.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711154334.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711153937.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs/Pasted image 20260711153928.png",
+    "CJCA/Security Monitoring & SIEM Fundamentals/imgs",
+    "CJCA/Windows Event Logs/Get-WinEvent.md",
+    "CJCA/Security Monitoring & SIEM Fundamentals",
     "CJCA/Windows Event Logs/imgs/Pasted image 20260711141953.png",
     "CJCA/Windows Event Logs/imgs/Pasted image 20260711140237.png",
     "CJCA/Windows Event Logs/Event Tracing for Windows (ETW).md",
-    "CJCA/Windows Event Logs/Get-WinEvent.md",
     "CJCA/Windows Event Logs/imgs/Pasted image 20260711115454.png",
     "CJCA/Windows Event Logs/Analyzing Evil With Sysmon & Event Logs.md",
     "CJCA/Windows Event Logs/Windows Event Logs.md",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260711105038.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260711104851.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710232235.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230522.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230459.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230316.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230226.png",
-    "CJCA/Windows Event Logs/imgs/Pasted image 20260710230119.png",
     "CJCA/Windows Event Logs/imgs",
     "CJCA/Pentest in a Nutshell/Linux Target.md",
     "CJCA/Incident Handling Process/Analysis of Insight Nexus Breach.md",
@@ -225,11 +230,6 @@
     "Enumeration/SMB.md",
     "Enumeration/NMAP.md",
     "Enumeration/DNS.md",
-    "Enumeration/SSH.md",
-    "CJCA/Footprinting/Enumeration Methodology.md",
-    "Enumeration/Untitled",
-    "CJCA/Footprinting/imgs",
-    "CJCA/Footprinting",
-    "Enumeration/imgs"
+    "Enumeration/Untitled"
   ]
 }
