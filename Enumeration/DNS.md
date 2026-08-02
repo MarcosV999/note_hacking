@@ -24,17 +24,17 @@ SecurityTrails provides a short [list](https://web.archive.org/web/2025032917474
 We do this using the NS record and the specification of the DNS server we want to query using the `@` character. This is because if there are other DNS servers, we can also use them and query the records. However, other DNS servers may be configured differently and, in addition, may be permanent for other zones.
 #### DIG - NS Query
 ```shell
-dig ns inlanefreight.htb @10.129.14.128
+dig ns inlanefreight.htb @$target
 ```
 #### DIG - Version Query
 Sometimes it is also possible to query a DNS server's version using a class CHAOS query and type TXT. However, this entry must exist on the DNS server.
-```bash
-dig CH TXT version.bind 10.129.120.85
+```bash$
+dig CH TXT version.bind $target
 ```
 #### DIG - ANY Query
 We can use the option `ANY` to view all available records. This will cause the server to show us all available entries that it is willing to disclose. It is important to note that not all entries from the zones will be shown.
 ```shell
-dig any inlanefreight.htb @10.129.14.128
+dig any inlanefreight.htb @$target
 ```
 
 `Zone transfer` refers to the transfer of zones to another server in DNS, which generally happens over TCP port 53. This procedure is abbreviated `Asynchronous Full Transfer Zone` (`AXFR`).

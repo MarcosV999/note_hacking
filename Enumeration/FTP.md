@@ -10,7 +10,7 @@ get <name_file>
 
 Specific scripts
 ```shell
-nmap -p21 --script="ftp-*" $TARGET
+nmap -p21 --script="ftp-*" $target
 ```
 
 Recursive Listing
@@ -20,12 +20,12 @@ ftp> ls -R
 
 Read banner
 ```shell
-nc -nv $TARGET 21
+nc -nv $target 21
 ```
 
 Download All Available Files
 ```shell
-wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136
+wget -m --no-passive ftp://anonymous:anonymous@$target
 ```
 
 Metaexploit:

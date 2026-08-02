@@ -1,13 +1,29 @@
+# Enum4Linux-ng - Enumeration
+```bash
+enum4linux-ng.py $target -A
+# listar usuarios
+enum4linux-ng -U <IP_DEL_SERVIDOR>
+# listar recursos compartidos (_shares_)
+enum4linux-ng -S <IP_DEL_SERVIDOR>
+# información del sistema operativo y dominio
+enum4linux-ng -O <IP_DEL_SERVIDOR>
+
+enum4linux-ng -u "usuario" -p "contraseña" <IP_DEL_SERVIDOR>
+```
 # Smbclient
 Command to list shares
 ``` bash
+smbclient -L //$target/
 smbclient -N -L //$target/
+smbclient [-U|--user=[DOMAIN/]USERNAME%[PASSWORD]] //$target/
+smbclient -L //$target -U "Caroline.Robinson%Marcos123!"
+nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
 ```
 - `-N`: No password.
 - `-L`: This option allows you to look at what services are available on a server.
 Command to connect share
 ```bash
-smbclient //<IP>/<SHARE> -U '%' -N
+smbclient //$target/<SHARE> -U '%' -N
 ```
 - **`-U '%'`**: The username is nothing (empty)
 - **`-N`**: It explicitly tells `smbclient` not to attempt to prompt for a password via the keyboard, forcing an anonymous connection.
@@ -40,7 +56,6 @@ rpcclient $> enumdomusers
 user:[mrb3n] rid:[0x3e8]
 user:[cry0l1t3] rid:[0x3e9]
 
-
 rpcclient $> queryuser 0x3e9
 
         User Name   :   cry0l1t3
@@ -49,7 +64,7 @@ rpcclient $> queryuser 0x3e9
 ```
 #### Brute Forcing User RIDs - Bash
 ```shell
-MarcosV999@htb[/htb]$ for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
+MarcosV999@htb[/htb]$ for i in $(seq 500 1100);do rpcclient -N -U "" $target -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
 
         User Name   :   sambauser
         user_rid :      0x1f5
@@ -90,23 +105,5 @@ MarcosV999@htb[/htb]$ smbmap -H $target --no-banner
 # Netexec
 ```shell
 nxc smb $target -u '' -p '' --shares
-```
-
-# Enum4Linux-ng - Enumeration
-```
-MarcosV999@htb[/htb]$ ./enum4linux-ng.py $target -A
-
-ENUM4LINUX - next generation
-
- ==========================
-|    Target Information    |
- ==========================
-[*] Target ........... 10.129.14.128
-[*] Username ......... ''
-[*] Random Username .. 'juzgtcsu'
-[*] Password ......... ''
-[*] Timeout .......... 5 second(s)
-
- =====================================
-|    Service Scan on 10.129.14.128    |
+nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
 ```

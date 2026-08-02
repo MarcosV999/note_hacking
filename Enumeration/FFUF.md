@@ -1,21 +1,43 @@
-``` bash
-ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$TARGET/ -H "Host:FUZZ.thetoppers.htb"
-```
-nota: este comando no descubrio el subdominio s3 que si lo encontro gobuster
-Comando similar con gobuster:
-``` bash
-sudo gobuster vhost -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://thetoppers.htb --append-domain
-```
 
 ```shell
-ffuf -u http://$TARGET/FUZZ -w /usr/share/wordlits/dirb/common.txt -mc 200,301,302
+ffuf -u http://$target/FUZZ -w /usr/share/dirb/wordlists/common.txt -mc 200,301,302
+
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 
+## Extension Fuzzing
+ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/blog/indexFUZZ
+## Page Fuzzing
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ.php
+## Recursive Scanning
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
 ```
 
-sudo echo "10.129.25.184 s3.thetoppers.htb" | sudo tee -a /etc/hosts
-aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+``` bash
+## Sub-domain Fuzzing
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://FUZZ.inlanefreight.htb/
+```
 
-ffuf -u https://jobs.hackthebox.com/FUZZ -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt -e .php,.html,.txt,.log -fc 404,429,403 -p 0.1
+```bash
+## Vhost
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb"
 
-gobuster dir -u https://jobs.hackthebox.com/ -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt -x php,html,txt,log -status-codes-blacklist 404,429
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
+```
 
-sudo echo "10.129.25.184 thetoppers.htb" | sudo tee -a /etc/hosts
+```bash
+## Parameter Fuzzing - GET
+ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$target:PORT/index.php?FUZZ=key -fs xxx #excluye el size
+## Parameter Fuzzing - POST
+ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$target:PORT/index.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx #excluye el size
+## Parameter Fuzzing - POST - username
+ffuf -w /opt/useful/SecLists/Usernames/Names/names.txt:FUZZ -u http://faculty.academy.htb:STMPO/courses/linux-security.php7 -X POST -d 'username=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -t 100
+ffuf -w /usr/share/seclists/Usernames/Names/names.txt:FUZZ_USER -w /usr/share/wordlists/rockyou.txt:FUZZ_PASS -u http://10.67.152.245/login -X POST -d 'username=FUZZ_USER&password=FUZZ_PASS' -H 'Content-Type: application/x-www-form-urlencoded' -t 100
+## the result de below command is 'id' Let's see what we get if we send a POST request with the id parameter. We can do that with curl, as follows:
+curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Content-Type: application/x-www-form-urlencoded'
+```
+
+```bash
+## DNS Records
+echo "10.129.25.184 thetoppers.htb" | sudo tee -a /etc/hosts
+sudo sh -c 'echo "SERVER_IP  academy.htb" >> /etc/hosts'
+sudo bash -c 'echo "SERVER_IP test.academy.htb archive.academy.htb faculty.academy.htb" >> /etc/hosts'
+```
