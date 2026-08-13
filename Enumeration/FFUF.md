@@ -1,24 +1,17 @@
 
 ```shell
-ffuf -c -w /usr/share/dirb/wordlists/common.txt -u http://$target/FUZZ 2>/dev/null
+ffuf -c -w /usr/share/dirb/common.txt -u http://$target/FUZZ 2>/dev/null
 
-<<<<<<< HEAD
-ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 
+ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
+
+ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
+
+ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
 ## Extension Fuzzing
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/blog/indexFUZZ
 ## Page Fuzzing
-ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ.php
-=======
-ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
+ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
 
-ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
-
-ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
-## Extension Fuzzing
-ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/blog/indexFUZZ
-## Page Fuzzing
-ffuf -s -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ.php
->>>>>>> 515d937 (update commands)
 ## Recursive Scanning
 ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
 ```
