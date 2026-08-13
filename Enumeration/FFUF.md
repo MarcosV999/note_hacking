@@ -1,24 +1,36 @@
 
 ```shell
-ffuf -u http://$target/FUZZ -w /usr/share/dirb/wordlists/common.txt -mc 200,301,302
+ffuf -c -w /usr/share/dirb/wordlists/common.txt -u http://$target/FUZZ 2>/dev/null
 
+<<<<<<< HEAD
 ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 
 ## Extension Fuzzing
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/blog/indexFUZZ
 ## Page Fuzzing
 ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ.php
+=======
+ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
+
+ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
+
+ffuf -c -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
+## Extension Fuzzing
+ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/blog/indexFUZZ
+## Page Fuzzing
+ffuf -s -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ.php
+>>>>>>> 515d937 (update commands)
 ## Recursive Scanning
 ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
 ```
 
 ``` bash
 ## Sub-domain Fuzzing
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://FUZZ.inlanefreight.htb/
+ffuf -s -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://FUZZ.inlanefreight.htb/
 ```
 
 ```bash
 ## Vhost
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb"
+ffuf -s -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb"
 
 ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
 ```

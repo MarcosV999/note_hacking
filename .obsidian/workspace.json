@@ -36,6 +36,48 @@
             }
           },
           {
+            "id": "918e5b7dd57b41a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Attack/XXE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "XXE"
+            }
+          },
+          {
+            "id": "760ec274ddd94ff0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CISCO - Ethical Hacker.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CISCO - Ethical Hacker"
+            }
+          },
+          {
+            "id": "3363f2bc24e55e35",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Enumeration/FTP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FTP"
+            }
+          },
+          {
             "id": "1c7964aa7b51441b",
             "type": "leaf",
             "state": {
@@ -50,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -84,7 +126,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sqlmap",
+                "query": "process.mainModule.require",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,39 +256,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff74ad7110857d9b",
+  "active": "760ec274ddd94ff0",
   "lastOpenFiles": [
-    "SQLI/sqlmap.md",
-    "Enumeration/FFUF.md",
     "notas.md",
-    "Enumeration/NMAP.md",
-    "Web Attack/IDOR.md",
-    "CISCO - Ethical Hacker.md",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
-    "Enumeration/SMB.md",
-    "Enumeration/LDAP.md",
-    "writeup/notas checkpoint.md",
-    "CJCA/Pentest in a Nutshell/Network Information Gathering.md",
-    "Enumeration/WordPress.md",
-    "cyber_apocalypse_ctf_2026.pdf",
-    "Enumeration/Windows Remote Management Protocols.md",
-    "Enumeration/DNS.md",
-    "Active Directory/Kerberos-DNS-LDAP-MSRPC-NTLM.md",
-    "CJCA/Windows Fundamentals/Diving Deeper & Close Out.md",
-    "Enumeration/NFS.md",
-    "File Upload.md",
-    "Ideas de proyectos.md",
+    "Web Attack/SSTI.md",
     "Protocolos and Terminology.md",
-    "README.md",
     "Tools deprecade.md",
-    "Default Configuration.md",
-    "Red Team/notes.md",
+    "README.md",
+    "Web Attack/File Upload.md",
+    "test cjca.md",
+    "Web Attack/XXE.md",
+    "Privilege Escalation/Linux.md",
+    "Privilege Escalation",
+    "Enumeration/FFUF.md",
+    "Enumeration/SNMP.md",
+    "Enumeration/SMB.md",
+    "Enumeration/FTP.md",
+    "notas web thm.md",
+    "cyber_apocalypse_ctf_2026.pdf",
+    "CJCA/Pentest in a Nutshell/Linux Target.md",
+    "Enumeration/MYSQL.md",
+    "Web Attack/SQLI/NoSQLi.md",
+    "Web Attack/SQLI/SQLi.md",
+    "Web Attack/SQLI/sqlmap.md",
+    "Web Attack/SSRF.md",
+    "Reports/writeup3.png",
+    "Reports/writeup2.png",
+    "Reports/writeup1.png",
+    "Enumeration/WordPress.md",
+    "Enumeration/Wireshark.md",
+    "Enumeration/SSH.md",
+    "Enumeration/Windows Remote Management Protocols.md",
+    "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
+    "CJCA/Pentest in a Nutshell/Network Information Gathering.md",
     "Red Team/Using_Nmap_Like_a_Red_Team_Operator-show-notes.pdf",
     "Red Team/imgs/Pasted image 20260725205532.png",
     "Red Team/imgs",
     "Red Team",
-    "Enumeration/FTP.md",
-    "CJCA/Hacking Wordpress/Explotation.md",
     "Active Directory/imgs/Pasted image 20260721115921.png",
     "Active Directory/imgs/Pasted image 20260721112516.png",
     "Active Directory/imgs/Pasted image 20260721112514.png",
@@ -255,12 +301,8 @@
     "Active Directory/imgs/Pasted image 20260720223603.png",
     "Active Directory/imgs",
     "Active Directory",
-    "Web Attack/imgs/Pasted image 20260718221206.png",
-    "Web Attack/imgs/Pasted image 20260718123311.png",
-    "Web Attack/imgs/Pasted image 20260718123038.png",
     "Web Attack/imgs",
     "Web Attack",
-    "imgs",
-    "CJCA/Introduction to Threat Hunting & Hunting With Elastic"
+    "imgs"
   ]
 }
