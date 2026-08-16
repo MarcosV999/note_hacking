@@ -18,14 +18,14 @@ ffuf -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-
 
 ``` bash
 ## Sub-domain Fuzzing
-ffuf -s -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://FUZZ.inlanefreight.htb/
+ffuf -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://FUZZ.inlanefreight.htb/ 2>/dev/null
 ```
 
 ```bash
 ## Vhost
-ffuf -s -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb"
+ffuf -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb" 2>/dev/null
 
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
+ffuf -c /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
 ```
 
 ```bash

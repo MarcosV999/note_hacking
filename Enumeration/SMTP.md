@@ -17,7 +17,7 @@ The command `VRFY` can be used to enumerate existing users on the system. Howeve
 All the commands we enter in the command line to send an email we know from every email client program like Thunderbird, Gmail, Outlook, and many others. We specify the `subject`, to whom the email should go, CC, BCC, and the information we want to share with others. Of course, the same works from the command line.
 #### Send an Email
 ```
-MarcosV999@htb[/htb]$ telnet 10.129.14.128 25
+MarcosV999@htb[/htb]$ telnet $target 25
 
 Trying 10.129.14.128...
 Connected to 10.129.14.128.
@@ -80,4 +80,6 @@ sudo nmap $target -p25 --script smtp-open-relay -v
 Students need to use `smtp-user-enum`, specifying the downloaded wordlist for the `-U` (short version of `file-of-usernames`) option, and 20 for the `-w` option, which sets the maximum number of seconds for waiting for replies:
 ```shell
 smtp-user-enum -M VRFY -U ./footprinting-wordlist.txt -t STMIP -m 60 -w 20
+smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/top-usernames-shortlist.txt -t $target -m 60 -w 1
+smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/Names/names.txt -t $target -m 60 -w 1 -v
 ```
