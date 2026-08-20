@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aad2d37c3e57ef88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "File Upload.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "File Upload"
-            }
-          },
-          {
             "id": "1c7964aa7b51441b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Attack/File Inclusions.md",
+                "file": "Tools deprecated.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Inclusions"
+              "title": "Tools deprecated"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -70,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "'cmd'",
+                "query": "hydra",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,14 +185,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "1c7964aa7b51441b",
+  "active": "cb9bf2a29d708d8d",
   "lastOpenFiles": [
-    "Web Attack/File Upload.md",
+    "Enumeration/FTP.md",
+    "Enumeration/FFUF.md",
     "Web Attack/File Inclusions.md",
+    "notas.md",
+    "Web Attack/imgs/Pasted image 20260819155426.png",
+    "Web Attack/imgs/Pasted image 20260819155202.png",
+    "Web Attack/imgs/Pasted image 20260819155019.png",
+    "Web Attack/File Uploads.md",
+    "Privilege Escalation/Crontab.md",
+    "Web Attack/XXE.md",
     "Default Configuration.md",
     "CISCO - Ethical Hacker.md",
     "Privilege Escalation/Linux.md",
-    "notas.md",
     "CJCA/Hacking Wordpress/Explotation.md",
     "CJCA/Hacking Wordpress/WordPress.md",
     "Enumeration/WordPress.md",
@@ -216,7 +208,6 @@
     "Labs/Nmap - Host Discovery.md",
     "Enumeration/DNS.md",
     "Labs",
-    "Enumeration/FFUF.md",
     "Web Attack/SQLI/sqlmap.md",
     "Enumeration/SMTP.md",
     "Enumeration/SNMP.md",
@@ -227,10 +218,6 @@
     "Privilege Escalation",
     "SQLI/sqlmap.md",
     "Web Attack/IDOR.md",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
-    "Enumeration/SMB.md",
-    "Enumeration/LDAP.md",
-    "writeup/notas checkpoint.md",
     "cyber_apocalypse_ctf_2026.pdf",
     "Red Team/Using_Nmap_Like_a_Red_Team_Operator-show-notes.pdf",
     "Red Team/imgs/Pasted image 20260725205532.png",
@@ -244,9 +231,6 @@
     "Active Directory/imgs/Pasted image 20260720223603.png",
     "Active Directory/imgs",
     "Active Directory",
-    "Web Attack/imgs/Pasted image 20260718221206.png",
-    "Web Attack/imgs/Pasted image 20260718123311.png",
-    "Web Attack/imgs/Pasted image 20260718123038.png",
     "Web Attack/imgs"
   ]
 }

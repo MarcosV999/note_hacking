@@ -1,6 +1,7 @@
 Connect to FTP
 ```shell
-ftp <target_ip>
+ftp $target
+ftp usuario@$target
 ```
 
 Download file to local
@@ -35,7 +36,7 @@ search auxiliary/scanner/ftp/
 
 Hydra:
 Si durante tu enumeración encontraste nombres de usuarios válidos pero no tienes sus contraseñas, puedes auditar la robustez de las credenciales en el servicio FTP:
-```
+```bash
 hydra -l usuario -P /usr/share/wordlists/rockyou.txt $TARGET ftp
 ```
 (Puedes cambiar -l usuario por -L usuarios.txt si tienes una lista de posibles nombres).
