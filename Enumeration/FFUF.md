@@ -1,10 +1,12 @@
 
 ```shell
-ffuf -c -w /usr/share/dirb/common.txt -u http://$target/FUZZ 2>/dev/null
+ffuf -c -w /usr/share/dirb/big.txt -u http://$target/FUZZ 2>/dev/null -e .php
 
-ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
+ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
 
-ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
+ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt -u http://$target/FUZZ 2>/dev/null
+
+ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
 
 ffuf -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -mc 200,302,301,304 -e .php,.html,.xml,.txt,.aspx,.js,.py -u http://$target/FUZZ 2>/dev/null
 ## Extension Fuzzing
@@ -23,14 +25,17 @@ ffuf -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u 
 
 ```bash
 ## Vhost
-ffuf -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb" 2>/dev/null
+ffuf -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -u http://$target:PORT/ -H "Host:FUZZ.thetoppers.htb" 2>/dev/null
 
-ffuf -c /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
+ffuf -c /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx #excluye el size xxx
 ```
 
 ```bash
 ## Parameter Fuzzing - GET
-ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$target:PORT/index.php?FUZZ=key -fs xxx #excluye el size
+ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u "http://$target:PORT/index.php?FUZZ=key" -fs xxx #excluye el size
+## Parameter Fuzzing - LFI 
+ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ1 -w /usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ2  -u "http://$target/secret/evil.php?FUZZ1=FUZZ2" -fs xxx
+ffuf -w /usr/share/seclists/Fuzzing/LFI/Linux/LFI-etc-files-of-all-linux-packages.txt -u "http://$target/secret/evil.php?command=FUZZ" -fs 0
 ## Parameter Fuzzing - POST
 ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$target:PORT/index.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx #excluye el size
 ## Parameter Fuzzing - POST - username

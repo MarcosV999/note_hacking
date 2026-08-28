@@ -18,4 +18,6 @@ _Google dorks_.
 - **Link:** Directs Google to search within hyperlinks for a specific term (for example, link:www.domain.com)
 - **Intitle:** Directs Google to search for a term within the title of a document (for example, intitle: “Index of /etc”)
 
-Wayback Machine allows you to go back in time on the Internet.
+_Wayback Machine_ allows you to go back in time on the Internet.
+
+_FinalRecon_ 

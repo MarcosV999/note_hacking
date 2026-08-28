@@ -7,6 +7,7 @@ sudo nmap 10.129.14.128 -sV -sC -p3306 --script mysql*
 ```
 #### Interaction with the MySQL Server
 ```shell
+mysql -u root -p
 mysql -u root -h 10.129.14.132
 mysql -u root -pP4SSw0rd -h 10.129.14.128
 mysql -u root -pP4SSw0rd -h 10.129.14.128 --ssl-verify-server-cert=0

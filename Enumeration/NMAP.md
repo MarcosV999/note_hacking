@@ -60,7 +60,7 @@ Using in specific open port:
 ```shell
 nmap -p $ports --script="ftp-*" $target
 nmap -p $ports --script smtp-enum-users $target
-nmap -p $ports --script="http-*" $target
+nmap -p $ports --script="http-vuln*" $target
 nmap -p $ports --script="smb-vuln-*" $target
 ```
 
