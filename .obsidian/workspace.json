@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumeration/FFUF.md",
+                "file": "Privilege Escalation/Linux/Writable Explotation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FFUF"
+              "title": "Writable Explotation"
             }
           }
         ]
@@ -190,14 +190,16 @@
   },
   "active": "1c7964aa7b51441b",
   "lastOpenFiles": [
-    "Web Attack/File Inclusions.md",
+    "Privilege Escalation/Linux/Crontab.md",
+    "Privilege Escalation/Linux/Writable Explotation.md",
+    "Privilege Escalation/Linux",
+    "notas.md",
     "Enumeration/FFUF.md",
+    "Web Attack/File Inclusions.md",
     "Enumeration/DNS.md",
     "CJCA/Footprinting/Infrastructure Based Enumeration.md",
     "Enumeration/WordPress.md",
     "Enumeration/MYSQL.md",
-    "Privilege Escalation/Crontab.md",
-    "notas.md",
     "Web Attack/SQLI/sqlmap.md",
     "Enumeration/NMAP.md",
     "Enumeration/MSSQL.md",
@@ -215,11 +217,9 @@
     "Web Attack/SSRF.md",
     "Web Attack/IDOR.md",
     "Tools deprecated.md",
-    "Enumeration/FTP.md",
     "Web Attack/imgs/Pasted image 20260819155426.png",
     "Web Attack/imgs/Pasted image 20260819155202.png",
     "Web Attack/imgs/Pasted image 20260819155019.png",
-    "Web Attack/File Uploads.md",
     "Labs",
     "Web Attack/SQLI",
     "Privilege Escalation",
@@ -234,7 +234,6 @@
     "Active Directory/imgs/Pasted image 20260721112202.png",
     "Active Directory/imgs/Pasted image 20260721111440.png",
     "Active Directory/imgs",
-    "Active Directory",
-    "Web Attack/imgs"
+    "Active Directory"
   ]
 }

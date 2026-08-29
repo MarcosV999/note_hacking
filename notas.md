@@ -10,6 +10,9 @@ sudo vim
 unified - terminal
 ```
 script /dev/null -c bash
+
+export TERM=xterm-256color
+stty sane
 ```
 
 ```bash
