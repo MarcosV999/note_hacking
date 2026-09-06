@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "File Transfer/Living off The Land.md",
+                "file": "notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Living off The Land"
+              "title": "notas"
+            }
+          },
+          {
+            "id": "ae3c195c58afdec1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Privilege Escalation/Linux/Writable Explotation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Writable Explotation"
             }
           }
         ]
@@ -55,8 +69,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "scp",
-                "matchingCase": true,
+                "query": "",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -190,38 +204,41 @@
   },
   "active": "1c7964aa7b51441b",
   "lastOpenFiles": [
+    "writeup/notas gaara.md",
+    "Enumeration/FFUF.md",
+    "notas.md",
+    "Privilege Escalation/Linux/Writable Explotation.md",
+    "Privilege Escalation/Linux/Crontab.md",
+    "Web Attack/SQLI/SQLi.md",
+    "Web Attack/SQLI/NoSQLi.md",
+    "Web Attack/File Uploads.md",
+    "Web Attack/File Inclusions.md",
+    "Web Attack/SSRF.md",
+    "Web Attack/HTTP Verb Tampering.md",
+    "Web Attack/SSTI.md",
+    "Web Attack/XXE.md",
+    "Web Attack/IDOR.md",
+    "Enumeration/NMAP.md",
+    "Reverse shell.md",
+    "Ideas de proyectos.md",
+    "Protocolos and Terminology.md",
+    "Untitled",
+    "README.md",
+    "Tools deprecated.md",
+    "OS",
+    "File Transfer/Living off The Land.md",
     "File Transfer/imgs/Pasted image 20260903160627.png",
     "File Transfer/imgs/Pasted image 20260903160616.png",
     "File Transfer/imgs",
     "imgs/Pasted image 20260714163657.png",
-    "File Transfer/Living off The Land.md",
     "File Transfer/code.md",
     "File Transfer/linux.md",
     "CJCA/Pentest in a Nutshell/Linux Target.md",
     "File Transfer/windows.md",
-    "notas.md",
     "File Transfer",
     "Enumeration/MYSQL.md",
-    "Default Configuration.md",
-    "Enumeration/NMAP.md",
-    "Enumeration/WordPress.md",
-    "Privilege Escalation/Linux/Writable Explotation.md",
-    "Privilege Escalation/Linux/Crontab.md",
     "Privilege Escalation/Linux",
-    "Enumeration/FFUF.md",
-    "Web Attack/File Inclusions.md",
-    "Enumeration/DNS.md",
-    "CJCA/Footprinting/Infrastructure Based Enumeration.md",
-    "Web Attack/SQLI/sqlmap.md",
-    "Enumeration/MSSQL.md",
-    "CJCA/Introducction Windows Command Line/CMD.md",
-    "CISCO - Ethical Hacker.md",
-    "Enumeration/SSH.md",
-    "Enumeration/Wireshark.md",
     "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
-    "CJCA/Introduction to Penetration Testing/Penetration Test Overview.md",
-    "Enumeration/File Analysis.md",
-    "Web Attack/HTTP Verb Tampering.md",
     "Web Attack/imgs/Pasted image 20260819155426.png",
     "Web Attack/imgs/Pasted image 20260819155202.png",
     "Web Attack/imgs/Pasted image 20260819155019.png",
@@ -231,10 +248,7 @@
     "cyber_apocalypse_ctf_2026.pdf",
     "Red Team/Using_Nmap_Like_a_Red_Team_Operator-show-notes.pdf",
     "Red Team/imgs/Pasted image 20260725205532.png",
-    "Red Team/imgs",
-    "Red Team",
     "Active Directory/imgs/Pasted image 20260721115921.png",
-    "Active Directory/imgs/Pasted image 20260721112516.png",
-    "Active Directory/imgs/Pasted image 20260721112514.png"
+    "Active Directory/imgs/Pasted image 20260721112516.png"
   ]
 }

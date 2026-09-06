@@ -1,4 +1,4 @@
-wp```bash
+```bash
 find / -type f -writable 2>/dev/null
 find /etc /var /opt -type f -writable 2>/dev/null
 find / -type f -writable -not -path "/proc/*" -not -path "/sys/*" 2>/dev/null

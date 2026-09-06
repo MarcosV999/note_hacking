@@ -9,9 +9,7 @@ To understand `HTTP Verb Tampering`, we must first learn about the different met
 | `DELETE`  | Deletes the resource at the specified location                                                      |
 | `OPTIONS` | Shows different options accepted by a web server, like accepted HTTP verbs                          |
 | `PATCH`   | Apply partial modifications to the resource at the specified location                               |
-
 As you can imagine, some of the above methods can perform very sensitive functionalities, like writing (`PUT`) or deleting (`DELETE`) files to the webroot directory on the back-end server. If a web server is not securely configured to manage these methods, we can use them to gain control over the back-end server. However, what makes HTTP Verb Tampering attacks more common (and hence more critical), is that they are caused by a misconfiguration in either the back-end web server or the web application, either of which can cause the vulnerability.
-
 # Bypassing Basic Authentication
 So, it seems like the web server configurations do cover both `GET` and `POST` requests. However, as we have previously learned, we can utilize many other HTTP methods, most notably the `HEAD` method, which is identical to a `GET` request but does not return the body in the HTTP response. If this is successful, we may not receive any output, but the `reset` function should still get executed, which is our main target.
 
