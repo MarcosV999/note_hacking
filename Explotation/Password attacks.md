@@ -113,3 +113,25 @@ MarcosV999@htb[/htb]$ sudo umount /media/bitlocker
 ```bash
 MarcosV999@htb[/htb]$ netexec <proto> <target-IP> -u <user or userlist> -p <password or passwordlist>
 ```
+
+[Password spraying](https://owasp.org/www-community/attacks/Password_Spraying_Attack) is a type of brute-force attack in which an attacker attempts to use a single password across many different user accounts. This technique can be particularly effective in environments where users are initialized with a default or standard password. 
+```
+MarcosV999@htb[/htb]$ netexec smb 10.100.38.0/24 -u <usernames.list> -p 'ChangeMe123!'
+```
+
+[Credential stuffing](https://owasp.org/www-community/attacks/Credential_stuffing) is another type of brute-force attack in which an attacker uses stolen credentials from one service to attempt access on others. Since many users reuse their usernames and passwords across multiple platforms (such as email, social media, and enterprise systems), these attacks are sometimes successful. 
+```
+MarcosV999@htb[/htb]$ hydra -C user_pass.list ssh://10.100.38.23
+```
+## Default credentials
+
+Many systems—such as routers, firewalls, and databases—come with `default credentials`. While best practice dictates that administrators change these credentials during setup, they are sometimes left unchanged, posing a serious security risk.
+
+While several lists of known default credentials are available online, there are also dedicated tools that automate the process. One widely used example is the [Default Credentials Cheat Sheet](https://github.com/ihebski/DefaultCreds-cheat-sheet), which we can install with `pip3`.
+```
+MarcosV999@htb[/htb]$ pip3 install defaultcreds-cheat-sheet
+```
+
+```
+MarcosV999@htb[/htb]$ creds search <SERVICE>
+```

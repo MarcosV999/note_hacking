@@ -13,26 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Explotation/Password attacks.md",
+                "file": "Post-Explotation/Attacking SAM, SYSTEM, and SECURITY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Password attacks"
+              "title": "Attacking SAM, SYSTEM, and SECURITY"
             }
           },
           {
             "id": "ae3c195c58afdec1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Privilege Escalation/Linux/Writable Explotation.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Writable Explotation"
+              "title": "New tab"
             }
           }
         ]
@@ -69,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cewl",
+                "query": "mysql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -204,14 +200,18 @@
   },
   "active": "1c7964aa7b51441b",
   "lastOpenFiles": [
-    "Enumeration/SMB.md",
-    "Explotation/Password attacks.md",
+    "Post-Explotation/Attacking SAM, SYSTEM, and SECURITY.md",
+    "OS/Windows/ntds.dit.md",
+    "Post-Explotation/Privilage Escalation",
+    "Enumeration/MYSQL.md",
     "notas.md",
+    "Explotation/Password attacks.md",
+    "Enumeration/SMB.md",
     "writeup/notas monitoring.md",
     "Reverse shell.md",
     "Explotation/Payload.md",
     "Explotation/Payloads windows.md",
-    "Privilege Escalation/Linux/Writable Explotation.md",
+    "Post-Explotation/Privilage Escalation/Linux/Writable Explotation.md",
     "Enumeration/FFUF.md",
     "Enumeration/WordPress.md",
     "Web Attack/File Inclusions.md",
@@ -220,7 +220,7 @@
     "CJCA/Incident Handling Process/Analysis of Insight Nexus Breach.md",
     "Enumeration/SMTP.md",
     "Explotation",
-    "Privilege Escalation/Linux/Crontab.md",
+    "Post-Explotation/Privilage Escalation/Linux/Crontab.md",
     "Web Attack/SQLI/SQLi.md",
     "Web Attack/SQLI/NoSQLi.md",
     "Web Attack/File Uploads.md",
@@ -228,25 +228,21 @@
     "Web Attack/HTTP Verb Tampering.md",
     "Web Attack/SSTI.md",
     "Web Attack/XXE.md",
-    "Web Attack/IDOR.md",
-    "Enumeration/NMAP.md",
-    "Ideas de proyectos.md",
     "OS",
     "File Transfer/imgs/Pasted image 20260903160627.png",
     "File Transfer/imgs/Pasted image 20260903160616.png",
     "File Transfer/imgs",
     "imgs/Pasted image 20260714163657.png",
     "File Transfer",
-    "Privilege Escalation/Linux",
+    "Post-Explotation/Privilage Escalation/Linux",
     "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
     "Web Attack/imgs/Pasted image 20260819155426.png",
     "Web Attack/imgs/Pasted image 20260819155202.png",
     "Web Attack/imgs/Pasted image 20260819155019.png",
     "Labs",
     "Web Attack/SQLI",
-    "Privilege Escalation",
+    "Post-Explotation",
     "cyber_apocalypse_ctf_2026.pdf",
-    "Red Team/Using_Nmap_Like_a_Red_Team_Operator-show-notes.pdf",
     "Red Team/imgs/Pasted image 20260725205532.png",
     "Active Directory/imgs/Pasted image 20260721115921.png",
     "Active Directory/imgs/Pasted image 20260721112516.png"
