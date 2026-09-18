@@ -45,4 +45,3 @@ deactivate
 dpkg -l | grep -i polkit
 ```
 
-

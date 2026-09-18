@@ -1,10 +1,10 @@
 ### Scan all port
 ``` bash
-sudo nmap -p- --reason -Pn -n -T1 -sS -oA empresa_allports_$(date +%Y%m%d__%H%M)  <IP>
+sudo nmap -p- --reason -Pn -n -T1 -sS -oA empresa_allports_$(date +%Y%m%d__%H%M) $target
 ```
 
 ``` bash
-sudo nmap -p- --open -sS -n -Pn -T4 -vvv <IP>
+sudo nmap -p- --open -sS -n -Pn -T4 -vvv $target
 ```
 - `-p-`: Scans the entire port range from 1 to 65535.
 - `--open`: Only shows ports with an "open" status, ignoring closed or filtered ones.
@@ -21,26 +21,20 @@ sudo nmap -sCV -p22,80,445 <IP>
 - `-sC`: Runs **Default Scripts**. It uses the Nmap Scripting Engine (NSE) to perform common security checks and basic enumeration.
 - `-sV`: Enables **Version Detection**. It probes open ports to determine what service and version are actually running (e.g., Apache 2.4.41).
 - `-p[ports]`: Scans only the specific ports identified in Phase 1 to save time.
-
 **By default, if you run nmap by passing only the IP address of your target, the tool automatically scans the 1000 most well-known ports**
-
 ### Host Discovery Scan
 ``` bash
-sudo nmap 10.129.2.18 -PE -sn 
+sudo nmap -PE -sn $target 
 ```
 - `-PE`: -PE/PP/PM- ICMP echo, timestamp, and netmask request discovery probes
 - `-sn`: Ping Scan - disable port scan
 - `--disable-arp-ping`
-Cuando un servicio esta  
-nmap -p 8443 --script http-title --script-args http.tls=true 10.129.60.191
 
 El buscador de CVEs por base de datos: --script vulners
-Es para ver las vulnerabilidades de las versiones que encontro el -sV:
-```
-nmap -sV --script vulners <IP>
+```bash
+nmap -sV --script vulners $target
 ```
 >nota: es seguro de usar --script vulners a diferencia de --script=vuln que puede llegar a ser peligroso.
-
 
 TCP Null Scan (-sN)
 Es un tipo de escaneo "sigiloso" que intenta evadir firewalls enviando paquetes que técnicamente no deberían existir según las reglas normales de internet.
@@ -49,19 +43,18 @@ El Null Scan envía un paquete con **todas las banderas en cero (vacías)**.
 nmap -p 8443 --script http-title --script-args http.tls=true 10.129.60.191
 ```
 
-Nmap Scripting Engine
-```shell
+```bash
+# Nmap Scripting Engine
 nmap --script-help "mysql-*"
 nmap --script-help "http-*"
 nmap --script-help "smb-vuln-*"
-```
-
-Using in specific open port:
-```shell
+# Using in specific open port
 nmap -p $ports --script="ftp-*" $target
 nmap -p $ports --script smtp-enum-users $target
 nmap -p $ports --script="http-vuln*" $target
 nmap -p $ports --script="smb-vuln-*" $target
+
+sudo nmap --script <category> $target
 ```
 
 | **Category** | **Description**                                                                                                                         |
@@ -80,12 +73,7 @@ nmap -p $ports --script="smb-vuln-*" $target
 | `safe`       | Defensive scripts that do not perform intrusive and destructive access.                                                                 |
 | `version`    | Extension for service detection.                                                                                                        |
 | `vuln`       | Identification of specific vulnerabilities.                                                                                             |
-```bash
-sudo nmap <target> --script <category>
-```
 ## Style sheets
-	With the XML output, we can easily create HTML reports that are easy to read, even for non-technical people. This is later very useful for documentation, as it presents our results in a detailed and clear way. To convert the stored results from XML format to HTML, we can use the tool `xsltproc`.
-
 ```bash
 xsltproc target.xml -o target.html
 ```
@@ -99,16 +87,12 @@ Nmap's TCP ACK scan (`-sA`) method is much harder to filter for firewalls and ID
 sudo nmap 10.129.2.28 -p 21,22,25 -sA -Pn -n --disable-arp-ping --packet-trace
 ```
 
-|**Scanning Options**|**Description**|
-|---|---|
-|`10.129.2.28`|Scans the specified target.|
-|`-p 21,22,25`|Scans only the specified ports.|
-|`-sS`|Performs SYN scan on specified ports.|
-|`-sA`|Performs ACK scan on specified ports.|
-|`-Pn`|Disables ICMP Echo requests.|
-|`-n`|Disables DNS resolution.|
-|`--disable-arp-ping`|Disables ARP ping.|
-|`--packet-trace`|Shows all packets sent and received.|
+| **Scanning Options** | **Description**                       |
+| -------------------- | ------------------------------------- |
+| `-sS`                | Performs SYN scan on specified ports. |
+| `-sA`                | Performs ACK scan on specified ports. |
+| `--disable-arp-ping` | Disables ARP ping.                    |
+| `--packet-trace`     | Shows all packets sent and received.  |
 ## Detect IDS/IPS
 Unlike firewalls and their rules, the detection of IDS/IPS systems is much more difficult because these are passive traffic monitoring systems. `IDS systems` examine all connections between hosts. If the IDS finds packets containing the defined contents or specifications, the administrator is notified and takes appropriate action in the worst case.
 ## Decoys
@@ -120,11 +104,7 @@ sudo nmap 10.129.2.28 -p 80 -sS -Pn -n --disable-arp-ping --packet-trace -D RND:
 
 | **Scanning Options** | **Description**                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------ |
-| `10.129.2.28`        | Scans the specified target.                                                                |
-| `-p 80`              | Scans only the specified ports.                                                            |
 | `-sS`                | Performs SYN scan on specified ports.                                                      |
-| `-Pn`                | Disables ICMP Echo requests.                                                               |
-| `-n`                 | Disables DNS resolution.                                                                   |
 | `--disable-arp-ping` | Disables ARP ping.                                                                         |
 | `--packet-trace`     | Shows all packets sent and received.                                                       |
 | `-D RND:5`           | Generates five random IP addresses that indicates the source IP the connection comes from. |
@@ -136,16 +116,11 @@ sudo nmap 10.129.2.28 -n -Pn -p 445 -O -S 10.129.2.200 -e tun0
 | **Scanning Options** | **Description**                                        |
 | -------------------- | ------------------------------------------------------ |
 | `10.129.2.28`        | Scans the specified target.                            |
-| `-n`                 | Disables DNS resolution.                               |
-| `-Pn`                | Disables ICMP Echo requests.                           |
-| `-p 445`             | Scans only the specified ports.                        |
-| `-O`                 | Performs operation system detection scan.              |
 | `-S`                 | Scans the target by using different source IP address. |
 | `10.129.2.200`       | Specifies the source IP address.                       |
 | `-e tun0`            | Sends all requests through the specified interface.    |
 ## DNS Proxying
 By default, `Nmap` performs a reverse DNS resolution unless otherwise specified to find more important information about our target. These DNS queries are also passed in most cases because the given web server is supposed to be found and visited. However, `Nmap` still gives us a way to specify DNS servers ourselves (`--dns-server <ns>,<ns>`). This method could be fundamental to us if we are in a demilitarized zone (`DMZ`). The company's DNS servers are usually more trusted than those from the Internet. So, for example, we could use them to interact with the hosts of the internal network. As another example, we can use `TCP port 53` as a source port (`--source-port`) for our scans. If the administrator uses the firewall to control this port and does not filter IDS/IPS properly, our TCP packets will be trusted and passed through.
-
 #### SYN-Scan of a Filtered Port
 ```bash
 sudo nmap 10.129.2.28 -p50000 -sS -Pn -n --disable-arp-ping --packet-trace
@@ -173,7 +148,6 @@ Ncat: Version 7.80 ( https://nmap.org/ncat )
 Ncat: Connected to 10.129.2.28:50000.
 220 ProFTPd
 ```
-
 
 ```bash
 sudo nmap -p- -g53 --max-retries=1 -Pn --disable-arp-ping $target

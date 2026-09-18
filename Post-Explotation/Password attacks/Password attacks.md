@@ -111,7 +111,7 @@ MarcosV999@htb[/htb]$ sudo umount /media/bitlocker
 
 #### NetExec Usage
 ```bash
-MarcosV999@htb[/htb]$ netexec <proto> <target-IP> -u <user or userlist> -p <password or passwordlist>
+MarcosV999@htb[/htb]$ netexec <protocol> $target -u <user or userlist> -p <password or passwordlist>
 ```
 
 [Password spraying](https://owasp.org/www-community/attacks/Password_Spraying_Attack) is a type of brute-force attack in which an attacker attempts to use a single password across many different user accounts. This technique can be particularly effective in environments where users are initialized with a default or standard password. 

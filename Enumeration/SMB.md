@@ -11,26 +11,26 @@ enum4linux-ng -O <IP_DEL_SERVIDOR>
 enum4linux-ng -u "usuario" -p "contraseña" <IP_DEL_SERVIDOR>
 ```
 # Smbclient
-Command to list shares
 ``` bash
 smbclient -L //$target/
 smbclient -N -L //$target/
-smbclient [-U|--user=[DOMAIN/]USERNAME%[PASSWORD]] //$target/
-smbclient -L //$target -U "Caroline.Robinson%Marcos123!"
-smbclient -U user \\\\$target\\SHARENAME
-nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
+smbclient [-U|--user=[DOMAIN/]USERNAME%[PASSWORD]] -L //$target/
+smbclient -U Caroline.Robinson%Marcos123! -L //$target 
+smbclient -U user //$target/SHARE
+smbclient -U '%' -N //$target/SHARE 
 ```
-- `-N`: No password.
+- `-N`: It explicitly tells `smbclient` not to attempt to prompt for a password via the keyboard, forcing an anonymous connection.
 - `-L`: This option allows you to look at what services are available on a server.
-Command to connect share
-```bash
-smbclient //$target/<SHARE> -U '%' -N
-```
-- **`-U '%'`**: The username is nothing (empty)
-- **`-N`**: It explicitly tells `smbclient` not to attempt to prompt for a password via the keyboard, forcing an anonymous connection.
+- `-U '%'`: The username is nothing (empty)
 # NMAP
 ```bash
 nmap --script smb-enum-shares -p 445 $target
+```
+# Netexec
+```shell
+nxc smb $target -u '' -p '' --shares
+nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
+nxc smb $target -u mendres -p 'Inlanefreight2025!' --spider SHARE --content --pattern "passw"
 ```
 # RPCclient
 Remote Procedure Call (RPC)
@@ -106,9 +106,4 @@ MarcosV999@htb[/htb]$ smbmap -H $target --no-banner
         Disk                                                    Permissions     Comment
         ----                                                    -----------     -------
         print$                                                  NO ACCESS
-```
-# Netexec
-```shell
-nxc smb $target -u '' -p '' --shares
-nxc smb $target -u "Caroline.Robinson" -p "Marcos123" --shares
 ```
