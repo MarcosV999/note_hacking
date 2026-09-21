@@ -51,3 +51,9 @@ echo "10.129.25.184 thetoppers.htb" | sudo tee -a /etc/hosts
 sudo sh -c 'echo "SERVER_IP  academy.htb" >> /etc/hosts'
 sudo bash -c 'echo "SERVER_IP test.academy.htb archive.academy.htb faculty.academy.htb" >> /etc/hosts'
 ```
+
+```bash
+ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.txt -o fuzzed_results_$(now).json -of json -u http://$target/FUZZ 2>/dev/null
+
+jq '.results[] | {url: .url, status: .status}' fuzzed_results.json
+```
