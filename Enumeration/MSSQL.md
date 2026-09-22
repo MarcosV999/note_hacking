@@ -20,18 +20,19 @@ rhosts => 10.129.201.248
 
 msf6 auxiliary(scanner/mssql/mssql_ping) > run
 
-[*] 10.129.201.248:       - SQL Server information for 10.129.201.248:
-[+] 10.129.201.248:       -    ServerName      = SQL-01
-[+] 10.129.201.248:       -    InstanceName    = MSSQLSERVER
-[+] 10.129.201.248:       -    IsClustered     = No
-[+] 10.129.201.248:       -    Version         = 15.0.2000.5
-[+] 10.129.201.248:       -    tcp             = 1433
-[+] 10.129.201.248:       -    np              = \\SQL-01\pipe\sql\query
-[*] 10.129.201.248:       - Scanned 1 of 1 hosts (100% complete)
-[*] Auxiliary module execution completed
 ```
 #### Connecting with Mssqlclient.py
 ```
 python3 mssqlclient.py Administrator@10.129.201.248 -windows-auth
 ```
 
+To interact with [MSSQL (Microsoft SQL Server)](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) with Linux we can use [sqsh](https://en.wikipedia.org/wiki/Sqsh) or [sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility) if you are using Windows. `Sqsh` is much more than a friendly prompt.
+```
+# Linux - SQSH
+MarcosV999@htb[/htb]$ sqsh -S 10.129.20.13 -U username -P Password123
+```
+
+```
+# Windows - SQLCMD
+C:\htb> sqlcmd -S 10.129.20.13 -U username -P Password123
+```

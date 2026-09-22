@@ -55,5 +55,7 @@ sudo bash -c 'echo "SERVER_IP test.academy.htb archive.academy.htb faculty.acade
 ```bash
 ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -e .php,.txt -o fuzzed_results_$(now).json -of json -u http://$target/FUZZ 2>/dev/null
 
+jq -r '.results[] | "\(.status) - \(.input.FUZZ)"' fuzzed_results.json
 jq '.results[] | {url: .url, status: .status}' fuzzed_results.json
+jq -r '.results[] | "\(.status) - \(.url)"' fuzzed_results.json
 ```

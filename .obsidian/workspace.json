@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notas.md",
+                "file": "Enumeration/FTP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notas"
-            }
-          },
-          {
-            "id": "ae3c195c58afdec1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "FTP"
             }
           }
         ]
@@ -65,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "anarchy",
+                "query": "jp2a",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,11 +190,21 @@
   },
   "active": "1c7964aa7b51441b",
   "lastOpenFiles": [
+    "Enumeration/Email.md",
+    "Enumeration/FTP.md",
+    "Enumeration/SMB.md",
+    "Enumeration/MYSQL.md",
+    "Enumeration/MSSQL.md",
+    "Enumeration/SSH.md",
+    "Explotation/Reverse shell.md",
+    "notas.md",
+    "Web Attack/File Uploads.md",
     "Enumeration/FFUF.md",
+    "Enumeration/NMAP.md",
+    "cyber_apocalypse_ctf_2026.pdf",
     "writeup/notas bbscute.md",
     "Post-Explotation/Password attacks/Password attacks.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
-    "notas.md",
     "Protocolos and Terminology.md",
     "Post-Explotation/Password attacks/Credential hunting.md",
     "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
@@ -220,21 +220,12 @@
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915154107.png",
-    "Enumeration/SMB.md",
-    "Enumeration/NMAP.md",
     "Ideas de proyectos.md",
     "CJCA/Web Requests/HTTP Fundamentals.md",
-    "CJCA/Introduction to Penetration Testing/Daily Life.md",
-    "File Transfer/windows.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260911222643.png",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
-    "OS/Windows/ntds.dit.md",
     "Post-Explotation/Privilage Escalation",
-    "Enumeration/MYSQL.md",
-    "Reverse shell.md",
-    "Explotation/Payload.md",
-    "Explotation/Payloads windows.md",
     "Explotation",
     "OS",
     "File Transfer/imgs/Pasted image 20260903160627.png",
@@ -244,7 +235,6 @@
     "File Transfer",
     "Post-Explotation/Privilage Escalation/Linux",
     "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
-    "Web Attack/imgs/Pasted image 20260819155426.png",
-    "Labs"
+    "Web Attack/imgs/Pasted image 20260819155426.png"
   ]
 }
