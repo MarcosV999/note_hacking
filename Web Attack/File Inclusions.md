@@ -19,7 +19,6 @@
 | `Response.WriteFile()`       |        ✅         |      ❌      |       ❌        |
 | `include`                    |        ✅         |      ✅      |       ✅        |
 # Local File Inclusion (LFI)
-
 Two common readable files that are available on most back-end servers are `/etc/passwd` on Linux and `C:\Windows\win.ini` | `C:\Windows\boot.ini` on Windows.
 #### Payloads
 ```bash

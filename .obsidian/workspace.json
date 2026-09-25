@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "23cc1f4f0e1ffd7d",
+        "id": "e8daf83e2d84ab19",
         "type": "tabs",
         "children": [
           {
-            "id": "1c7964aa7b51441b",
+            "id": "2315a8d6e6ab2d71",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Post-Explotation/Port Forwarding.md",
+                "file": "Web Attack/SQLI/NoSQLi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Port Forwarding"
+              "title": "NoSQLi"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "forwarding",
+                "query": "%2e%2e%2f%2e%2e%2f%2e%2e%2f",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,10 +188,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "1c7964aa7b51441b",
+  "active": "2315a8d6e6ab2d71",
   "lastOpenFiles": [
-    "Enumeration/FTP.md",
+    "Web Attack/SQLI/SQLi.md",
+    "Web Attack/File Uploads.md",
+    "Web Attack/SQLI/NoSQLi.md",
+    "Web Attack/Command Injection.md",
+    "Web Attack/Authentication Vulnerabilities.md",
+    "Web Attack/Path Traversal.md",
+    "Web Attack/File Inclusions.md",
+    "Web Attack/SQLI/sqlmap.md",
     "Post-Explotation/Port Forwarding.md",
+    "Enumeration/FTP.md",
     "Enumeration/Email.md",
     "Enumeration/SMB.md",
     "Enumeration/MYSQL.md",
@@ -199,7 +207,6 @@
     "Enumeration/SSH.md",
     "Explotation/Reverse shell.md",
     "notas.md",
-    "Web Attack/File Uploads.md",
     "Enumeration/FFUF.md",
     "Enumeration/NMAP.md",
     "cyber_apocalypse_ctf_2026.pdf",
@@ -211,17 +218,10 @@
     "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
     "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
     "Post-Explotation/Password attacks/Pass the Hash.md",
-    "Post-Explotation/Password attacks/Pass the Ticket (PtT) from Windows.md",
-    "Post-Explotation/Password attacks/Attacking SAM, SYSTEM, and SECURITY.md",
-    "Post-Explotation/Password attacks/Attacking LSASS.md",
-    "Post-Explotation/Password attacks/Pass the Ticket (PtT) from Linux.md",
-    "CJCA/Incident Handling Process/Incident Handling Process Overview.md",
-    "CJCA/Using the Metasploit Framework/MSF Components.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915154107.png",
-    "Ideas de proyectos.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260911222643.png",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
