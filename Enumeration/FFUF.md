@@ -1,6 +1,6 @@
 
 ```shell
-ffuf -c -w /usr/share/dirb/big.txt -u http://$target/FUZZ 2>/dev/null -e .php
+ffuf -c -w /usr/share/dirb/wordlists/big.txt -u http://$target/FUZZ 2>/dev/null -e .php
 
 ffuf -ic -c -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-small.txt -u http://$target/FUZZ 2>/dev/null
 

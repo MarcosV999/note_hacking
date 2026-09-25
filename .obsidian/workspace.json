@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Attack/SQLI/NoSQLi.md",
+                "file": "CJCA/Footprinting/Infrastructure Based Enumeration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NoSQLi"
+              "title": "Infrastructure Based Enumeration"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "%2e%2e%2f%2e%2e%2f%2e%2e%2f",
+                "query": "git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,11 +188,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "2315a8d6e6ab2d71",
+  "active": "cb9bf2a29d708d8d",
   "lastOpenFiles": [
+    "Web Attack/Infomation Disclosure.md",
+    "Web Attack/imgs/Pasted image 20260925125841.png",
+    "Web Attack/imgs/Pasted image 20260925125613.png",
+    "Web Attack/imgs/Pasted image 20260925124257.png",
+    "Web Attack/imgs/Pasted image 20260925124234.png",
+    "Enumeration/FFUF.md",
+    "Web Attack/SQLI/NoSQLi.md",
     "Web Attack/SQLI/SQLi.md",
     "Web Attack/File Uploads.md",
-    "Web Attack/SQLI/NoSQLi.md",
     "Web Attack/Command Injection.md",
     "Web Attack/Authentication Vulnerabilities.md",
     "Web Attack/Path Traversal.md",
@@ -207,7 +213,6 @@
     "Enumeration/SSH.md",
     "Explotation/Reverse shell.md",
     "notas.md",
-    "Enumeration/FFUF.md",
     "Enumeration/NMAP.md",
     "cyber_apocalypse_ctf_2026.pdf",
     "writeup/notas bbscute.md",
@@ -216,8 +221,6 @@
     "Protocolos and Terminology.md",
     "Post-Explotation/Password attacks/Credential hunting.md",
     "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
-    "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
-    "Post-Explotation/Password attacks/Pass the Hash.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
@@ -229,12 +232,8 @@
     "Explotation",
     "OS",
     "File Transfer/imgs/Pasted image 20260903160627.png",
-    "File Transfer/imgs/Pasted image 20260903160616.png",
     "File Transfer/imgs",
-    "imgs/Pasted image 20260714163657.png",
     "File Transfer",
-    "Post-Explotation/Privilage Escalation/Linux",
-    "CJCA/Introduction to Penetration Testing/Penetration Testing Process.png",
-    "Web Attack/imgs/Pasted image 20260819155426.png"
+    "Post-Explotation/Privilage Escalation/Linux"
   ]
 }
