@@ -10,15 +10,31 @@
           {
             "id": "2315a8d6e6ab2d71",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Attack/API Testing.md",
+                "file": "Enumeration/SMB.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "SMB"
+            }
+          },
+          {
+            "id": "5ce890bdc7971471",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Post-Explotation/Password attacks/Pass the Hash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API Testing"
+              "title": "Pass the Hash"
             }
           }
         ]
@@ -55,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "smb_login",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,8 +206,12 @@
   },
   "active": "2315a8d6e6ab2d71",
   "lastOpenFiles": [
-    "CJCA/Footprinting/Infrastructure Based Enumeration.md",
+    "Post-Explotation/Password attacks/Pass the Hash.md",
+    "Post-Explotation/Password attacks/Password attacks.md",
+    "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
+    "Enumeration/SMB.md",
     "Web Attack/API Testing.md",
+    "CJCA/Footprinting/Infrastructure Based Enumeration.md",
     "Web Attack/Infomation Disclosure.md",
     "Web Attack/imgs/Pasted image 20260925125841.png",
     "Web Attack/imgs/Pasted image 20260925125613.png",
@@ -209,7 +229,6 @@
     "Post-Explotation/Port Forwarding.md",
     "Enumeration/FTP.md",
     "Enumeration/Email.md",
-    "Enumeration/SMB.md",
     "Enumeration/MYSQL.md",
     "Enumeration/MSSQL.md",
     "Enumeration/SSH.md",
@@ -218,10 +237,7 @@
     "Enumeration/NMAP.md",
     "cyber_apocalypse_ctf_2026.pdf",
     "writeup/notas bbscute.md",
-    "Post-Explotation/Password attacks/Password attacks.md",
-    "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Protocolos and Terminology.md",
-    "Post-Explotation/Password attacks/Credential hunting.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
