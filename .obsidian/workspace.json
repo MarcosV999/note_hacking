@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Footprinting/Infrastructure Based Enumeration.md",
+                "file": "Web Attack/API Testing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Infrastructure Based Enumeration"
+              "title": "API Testing"
             }
           }
         ]
@@ -188,8 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "cb9bf2a29d708d8d",
+  "active": "2315a8d6e6ab2d71",
   "lastOpenFiles": [
+    "CJCA/Footprinting/Infrastructure Based Enumeration.md",
+    "Web Attack/API Testing.md",
     "Web Attack/Infomation Disclosure.md",
     "Web Attack/imgs/Pasted image 20260925125841.png",
     "Web Attack/imgs/Pasted image 20260925125613.png",
@@ -220,7 +222,6 @@
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Protocolos and Terminology.md",
     "Post-Explotation/Password attacks/Credential hunting.md",
-    "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
