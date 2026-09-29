@@ -2,11 +2,13 @@
 
 ```bash
 # reverse lookup
+nmap -sL -R --dns-servers 10.13.37.1 10.13.37.0/24
 dig @$target -x $target
 dig any domain.name @$target
 dig axfr domain.name @$target
 
 dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
+
 ## Sub-domain Fuzzing
 dnsenum --enum inlanefreight.com -f  /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt 
 ```

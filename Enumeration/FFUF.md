@@ -39,7 +39,7 @@ ffuf -w /usr/share/seclists/Fuzzing/LFI/Linux/LFI-etc-files-of-all-linux-package
 ## Parameter Fuzzing - POST
 ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$target:PORT/index.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx #excluye el size
 ## Parameter Fuzzing - POST - username
-ffuf -w /opt/useful/seclists/Usernames/Names/names.txt:FUZZ -u http://faculty.academy.htb:STMPO/courses/linux-security.php7 -X POST -d 'username=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -t 100
+ffuf -w /usr/share/seclists/Usernames/Names/names.txt:FUZZ -u http://faculty.academy.htb:STMPO/courses/linux-security.php7 -X POST -d 'username=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -t 100
 ffuf -w /usr/share/seclists/Usernames/Names/names.txt:FUZZ_USER -w /usr/share/wordlists/rockyou.txt:FUZZ_PASS -u http://10.67.152.245/login -X POST -d 'username=FUZZ_USER&password=FUZZ_PASS' -H 'Content-Type: application/x-www-form-urlencoded' -t 100
 ## the result de below command is 'id' Let's see what we get if we send a POST request with the id parameter. We can do that with curl, as follows:
 curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Content-Type: application/x-www-form-urlencoded'

@@ -1,5 +1,5 @@
 # Analysis with Wireshark
-`Wireshark` is a free and open-source network traffic analyzer much like tcpdump but with a graphical interface. Wireshark is multi-platform and capable of capturing live data off many different interface types (to include WiFi, USB, and Bluetooth) and saving the traffic to several different formats. Wireshark allows the user to dive much deeper into the inspection of network packets than other tools.
+`Wireshark` is a free and open-source network traffic analyzer much like tcpdump but with a graphical interface. 
 #### Locating Wireshark
 ```
 MarcosV999@htb[/htb]$ which wireshark
@@ -53,9 +53,6 @@ Capturing on 'eth0'
 ```
 
 `-f` allows us to apply filters to the capture. In the example, we utilized `host`, but you can use almost any filter Wireshark recognizes. We have touched on TShark a bit now. Let's take a look at a nifty tool called Termshark.
-## Termshark
-
-Termshark is a Text-based User Interface (TUI) application that provides the user with a Wireshark-like interface right in your terminal window.
 ## Wireshark GUI Walkthrough
 Now that we have spent time learning the art of packet capture from the command line let's spend some time in Wireshark. We will take a few minutes to examine what we are looking at in the output below. Let's dissect this view of the Wireshark GUI.
 #### Capture Filters
@@ -73,8 +70,6 @@ Now that we have spent time learning the art of packet capture from the command 
 |broadcast / multicast / unicast|Grabs a specific type of traffic. one to one, one to many, or one to all.|
 #### Display Filters
 
-`Display Filters-` are used while the capture is running and after the capture has stopped. Display filters are proprietary to Wireshark, which offers many different options for almost any protocol.
-
 |    **Display Filters**     | **Result**                                                                                    |
 | :------------------------: | --------------------------------------------------------------------------------------------- |
 |     ip.addr == x.x.x.x     | Capture only traffic pertaining to a certain host. This is an OR statement.                   |
@@ -85,13 +80,15 @@ Now that we have spent time learning the art of packet capture from the command 
 |  tcp.port / udp.port != x  | will capture everything except the port specified                                             |
 |       and / or / not       | AND will concatenate, OR will find either of two options, NOT will exclude your input option. |
 
-#### Applying a Display Filter
-
-Applying a display filter is even easier than a capture filter. From the main Wireshark capture window, all we need to do is: select the bookmark in the Toolbar → , then select an option from the drop-down. Alternatively, place the cursor in the text radial → and type in the filter we wish to use. If the field turns green, the filter is correct. `Just like in the image below.`
-![[Apply display filter.png]]
-
-When using capture and display filters, keep in mind that what we specify is taken in a literal sense. For example, filtering for port 80 traffic is not the same as filtering for HTTP. Think of ports and protocols more like guidelines instead of rigid rules. Ports can be bound and used for different purposes other than what they were originally intended. For example, filtering for HTTP will look for key markers that the protocol uses, such as GET/POST requests, and show results from them. Filtering for port 80 will show anything sent or received over that port regardless of the transport protocol.
-
-http://192.168.189.192:81/settings.html
-http://10.0.2.15:81/settings.html
-http://10.0.2.15:81/role.html
+| Wireshark filter                                  | Description                                                                                                                                                                          |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ip.addr == 56.48.210.13`                         | Filters packets with a specific IP address                                                                                                                                           |
+| `tcp.port == 80`                                  | Filters packets by port (HTTP in this case).                                                                                                                                         |
+| `http`                                            | Filters for HTTP traffic.                                                                                                                                                            |
+| `dns`                                             | Filters DNS traffic, which is useful to monitor domain name resolution.                                                                                                              |
+| `tcp.flags.syn == 1 && tcp.flags.ack == 0`        | Filters SYN packets (used in TCP handshakes), useful for detecting scanning or connection attempts.                                                                                  |
+| `icmp`                                            | Filters ICMP packets (used for Ping), which can be useful for reconnaissance or network issues.                                                                                      |
+| `http.request.method == "POST"`                   | Filters for HTTP POST requests. In the case that POST requests are sent over unencrypted HTTP, it may be the case that passwords or other sensitive information is contained within. |
+| `tcp.stream eq 53`                                | Filters for a specific TCP stream. Helps track a conversation between two hosts.                                                                                                     |
+| `eth.addr == 00:11:22:33:44:55`                   | Filters packets from/to a specific MAC address.                                                                                                                                      |
+| `ip.src == 192.168.24.3 && ip.dst == 56.48.210.3` | Filters traffic between two specific IP addresses. Helps track communication between specific hosts.                                                                                 |

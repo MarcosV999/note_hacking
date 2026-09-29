@@ -52,7 +52,7 @@
             }
           },
           {
-            "id": "09fa2dcb957b0c40",
+            "id": "bb47d64542105a33",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -64,9 +64,93 @@
               "icon": "lucide-file",
               "title": "VPN Tunneling"
             }
+          },
+          {
+            "id": "52c65bf02332c0c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Attack/SQLI/sqlmap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sqlmap"
+            }
+          },
+          {
+            "id": "3e9de433338d171c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/Linux/Network.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Network"
+            }
+          },
+          {
+            "id": "510f5a75cab1494d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Enumeration/WordPress.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WordPress"
+            }
+          },
+          {
+            "id": "f7cab980184a1d96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wireshark"
+            }
+          },
+          {
+            "id": "3c3c29e1cf4350cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Explotation/WIFI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WIFI"
+            }
+          },
+          {
+            "id": "7f02dee0be7d4db1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Explotation/WIFI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WIFI"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -100,10 +184,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nicocha30",
+                "query": "pcap",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -233,39 +317,39 @@
       "bases:Create new base": false
     }
   },
-  "active": "09fa2dcb957b0c40",
+  "active": "7f02dee0be7d4db1",
   "lastOpenFiles": [
-    "notas.md",
-    "Post-Explotation/VPN Tunneling.md",
     "writeup/Notas Layover.md",
-    "Enumeration/SMB.md",
-    "Post-Explotation/Password attacks/Pass the Hash.md",
+    "Post-Explotation/VPN Tunneling.md",
+    "Explotation/WIFI.md",
+    "OS/Linux/Network.md",
+    "Explotation/Payload.md",
+    "Explotation/Payloads windows.md",
+    "Explotation/Reverse shell.md",
+    "OS/Linux/Linux permissions.md",
+    "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
+    "Post-Explotation/Password attacks/Credential hunting.md",
+    "notas.md",
+    "CJCA/Intro to Network Traffict Analysis/Tcpdump.md",
+    "Enumeration/WordPress.md",
     "Post-Explotation/Password attacks/Password attacks.md",
+    "Enumeration/FFUF.md",
+    "Web Attack/SQLI/sqlmap.md",
+    "Web Attack/SQLI/SQLi.md",
+    "Web Attack/SQLI/NoSQLi.md",
+    "OS/Linux/Sudo.md",
+    "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
-    "Web Attack/API Testing.md",
-    "CJCA/Footprinting/Infrastructure Based Enumeration.md",
-    "Web Attack/Infomation Disclosure.md",
+    "Post-Explotation/Password attacks/Pass the Ticket (PtT) from Windows.md",
+    "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
+    "Post-Explotation/Password attacks/Attacking SAM, SYSTEM, and SECURITY.md",
+    "Post-Explotation/Password attacks/Attacking LSASS.md",
+    "CISCO - Ethical Hacker.md",
+    "Default Configuration.md",
     "Web Attack/imgs/Pasted image 20260925125841.png",
     "Web Attack/imgs/Pasted image 20260925125613.png",
     "Web Attack/imgs/Pasted image 20260925124257.png",
     "Web Attack/imgs/Pasted image 20260925124234.png",
-    "Enumeration/FFUF.md",
-    "Web Attack/SQLI/NoSQLi.md",
-    "Web Attack/SQLI/SQLi.md",
-    "Web Attack/File Uploads.md",
-    "Web Attack/Command Injection.md",
-    "Web Attack/Authentication Vulnerabilities.md",
-    "Web Attack/Path Traversal.md",
-    "Web Attack/File Inclusions.md",
-    "Web Attack/SQLI/sqlmap.md",
-    "Post-Explotation/Port Forwarding.md",
-    "Enumeration/FTP.md",
-    "Enumeration/Email.md",
-    "Enumeration/MYSQL.md",
-    "Enumeration/MSSQL.md",
-    "Enumeration/SSH.md",
-    "Explotation/Reverse shell.md",
-    "Enumeration/NMAP.md",
     "cyber_apocalypse_ctf_2026.pdf",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
