@@ -7,44 +7,6 @@ The main components used for remote management of Windows and Windows servers ar
 ## RDP
 
 The [Remote Desktop Protocol](https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol) (`RDP`) is a protocol developed by Microsoft for remote access to a computer running the Windows operating system. This protocol allows display and control commands to be transmitted via the GUI encrypted over IP networks. RDP works at the application layer in the TCP/IP reference model, typically utilizing TCP port 3389 as the transport protocol. However, the connectionless UDP protocol can use port 3389 also for remote administration. The `Remote Desktop` service is installed by default on Windows servers and does not require additional external applications. This service can be activated using the `Server Manager` and comes with the default setting to allow connections to the service only to hosts with [Network level authentication](https://en.wikipedia.org/wiki/Network_Level_Authentication) (`NLA`).
-## Footprinting the Service
-
-Scanning the RDP service can quickly give us a lot of information about the host. For example, we can determine if `NLA` is enabled on the server or not, the product version, and the hostname.
-```shell
-nmap -sV -sC 10.129.201.248 -p3389 --script rdp*
-```
-In addition, we can use `--packet-trace` to track the individual packages and inspect their contents manually.
-```shell
-nmap -sV -sC 10.129.201.248 -p3389 --packet-trace --disable-arp-ping -n
-```
-A Perl script named [rdp-sec-check.pl](https://github.com/CiscoCXSecurity/rdp-sec-check) has also been developed by [Cisco CX Security Labs](https://github.com/CiscoCXSecurity) that can unauthentically identify the security settings of RDP servers based on the handshakes.
-#### RDP Security Check - Installation
-```shell
-MarcosV999@htb[/htb]$ sudo cpan
-
-Loading internal logger. Log::Log4perl recommended for better logging
-
-CPAN.pm requires configuration, but most of it can be done automatically.
-If you answer 'no' below, you will enter an interactive dialog for each
-configuration option instead.
-
-Would you like to configure as much as possible automatically? [yes] yes
-
-
-Autoconfiguration complete.
-```
-#### RDP Security Check
-```shell
-MarcosV999@htb[/htb]$ git clone https://github.com/CiscoCXSecurity/rdp-sec-check.git && cd rdp-sec-check
-MarcosV999@htb[/htb]$ ./rdp-sec-check.pl 10.129.201.248
-```
-Authentication and connection to such RDP servers can be made in several ways. For example, we can connect to RDP servers on Linux using `xfreerdp`, `rdesktop`, or `Remmina` and interact with the GUI of the server accordingly.
-#### Initiate an RDP Session
-```
-xfreerdp /u:cry0l1t3 /p:"P455w0rd!" /v:10.129.201.248
-xfreerdp /v:IP /u:Administrator /p:'87N1ns@slls83' /dynamic-resolution
-```
-
 ## WinRM
 
 The Windows Remote Management (`WinRM`) is a simple Windows integrated remote management protocol based on the command line. WinRM relies on `TCP` ports `5985` and `5986` for communication, with the last port `5986 using HTTPS`, as ports 80 and 443 were previously used for this task. However, since port 80 was mainly blocked for security reasons, the newer ports 5985 and 5986 are used today.

@@ -14,73 +14,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "writeup/Notas Layover.md",
+                "file": "writeup/Notas machine.md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Notas Layover"
+              "title": "Notas machine"
             }
           },
           {
-            "id": "2315a8d6e6ab2d71",
+            "id": "4cbf170faf46cfba",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumeration/SMB.md",
+                "file": "notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SMB"
-            }
-          },
-          {
-            "id": "5ce890bdc7971471",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Post-Explotation/Password attacks/Pass the Hash.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pass the Hash"
+              "title": "notas"
             }
           },
           {
             "id": "bb47d64542105a33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Post-Explotation/VPN Tunneling.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "VPN Tunneling"
-            }
-          },
-          {
-            "id": "52c65bf02332c0c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Attack/SQLI/sqlmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sqlmap"
-            }
-          },
-          {
-            "id": "3e9de433338d171c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -94,63 +52,77 @@
             }
           },
           {
-            "id": "510f5a75cab1494d",
+            "id": "a839cf23e21c10a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumeration/WordPress.md",
+                "file": "Explotation/Reverse shell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WordPress"
+              "title": "Reverse shell"
             }
           },
           {
-            "id": "f7cab980184a1d96",
+            "id": "10f47177276e6291",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
+                "file": "notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wireshark"
+              "title": "notas"
             }
           },
           {
-            "id": "3c3c29e1cf4350cf",
+            "id": "25d60efa864183fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Explotation/WIFI.md",
+                "file": "Explotation/Reverse shell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIFI"
+              "title": "Reverse shell"
             }
           },
           {
-            "id": "7f02dee0be7d4db1",
+            "id": "ff00e03c76c80279",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Explotation/WIFI.md",
+                "file": "Enumeration/MYSQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WIFI"
+              "title": "MYSQL"
+            }
+          },
+          {
+            "id": "7e62b4f105642cef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "writeup/Notas machine.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notas machine"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -184,7 +156,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pcap",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -317,51 +289,51 @@
       "bases:Create new base": false
     }
   },
-  "active": "7f02dee0be7d4db1",
+  "active": "7e62b4f105642cef",
   "lastOpenFiles": [
-    "writeup/Notas Layover.md",
+    "Explotation/Web Attack/SSRF.md",
+    "Explotation/Web Attack/SSTI.md",
+    "Enumeration/RDP.md",
+    "Enumeration/imgs/Pasted image 20261002103329.png",
+    "Enumeration/imgs/Pasted image 20261002102618.png",
+    "Enumeration/Windows Remote Management Protocols.md",
+    "writeup/Notas machine.md",
+    "notas.md",
+    "Post-Explotation/Password attacks/Password attacks.md",
+    "Enumeration/MYSQL.md",
+    "CISCO - Ethical Hacker.md",
+    "cyber_apocalypse_ctf_2026.pdf",
     "Post-Explotation/VPN Tunneling.md",
-    "Explotation/WIFI.md",
-    "OS/Linux/Network.md",
-    "Explotation/Payload.md",
-    "Explotation/Payloads windows.md",
-    "Explotation/Reverse shell.md",
     "OS/Linux/Linux permissions.md",
+    "OS/Linux/Network.md",
+    "Explotation/Reverse shell.md",
+    "Explotation/Payloads windows.md",
+    "Explotation/Payload.md",
+    "Enumeration/MSSQL - SQL Server.md",
+    "Enumeration/IMPACKET.md",
+    "Enumeration/SQL server.md",
+    "Explotation/WIFI.md",
     "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
     "Post-Explotation/Password attacks/Credential hunting.md",
-    "notas.md",
     "CJCA/Intro to Network Traffict Analysis/Tcpdump.md",
     "Enumeration/WordPress.md",
-    "Post-Explotation/Password attacks/Password attacks.md",
     "Enumeration/FFUF.md",
-    "Web Attack/SQLI/sqlmap.md",
-    "Web Attack/SQLI/SQLi.md",
-    "Web Attack/SQLI/NoSQLi.md",
-    "OS/Linux/Sudo.md",
-    "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
+    "Explotation/Web Attack/SQL/sqlmap.md",
+    "Explotation/Web Attack/SQL/SQLi.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
-    "Post-Explotation/Password attacks/Pass the Ticket (PtT) from Windows.md",
-    "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
-    "Post-Explotation/Password attacks/Attacking SAM, SYSTEM, and SECURITY.md",
-    "Post-Explotation/Password attacks/Attacking LSASS.md",
-    "CISCO - Ethical Hacker.md",
-    "Default Configuration.md",
-    "Web Attack/imgs/Pasted image 20260925125841.png",
-    "Web Attack/imgs/Pasted image 20260925125613.png",
-    "Web Attack/imgs/Pasted image 20260925124257.png",
-    "Web Attack/imgs/Pasted image 20260925124234.png",
-    "cyber_apocalypse_ctf_2026.pdf",
+    "Explotation/Web Attack/imgs/Pasted image 20260925125841.png",
+    "Explotation/Web Attack/imgs/Pasted image 20260925125613.png",
+    "Explotation/Web Attack/imgs/Pasted image 20260925124257.png",
+    "Explotation/Web Attack/imgs/Pasted image 20260925124234.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915154107.png",
-    "Post-Explotation/Password attacks/imgs/Pasted image 20260911222643.png",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
     "Post-Explotation/Privilage Escalation",
     "Explotation",
     "OS",
-    "File Transfer/imgs/Pasted image 20260903160627.png",
     "File Transfer/imgs",
     "File Transfer",
     "Post-Explotation/Privilage Escalation/Linux"

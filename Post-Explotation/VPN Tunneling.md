@@ -21,3 +21,8 @@ sudo ip route add 10.13.37.0/24 dev ligolo
 # Opcional, solo cuando sale RTNETLINK answers: File exists
 sudo ip route del 10.13.37.0/24 dev tun0
 ```
+
+```bash
+listener_add --addr 0.0.0.0:3333 --to 127.0.0.1:3333
+listener_add --addr 0.0.0.0:4444 --to 127.0.0.1:4444
+```

