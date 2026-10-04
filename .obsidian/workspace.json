@@ -10,119 +10,18 @@
           {
             "id": "1b2b3a7e1b9a60fb",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "writeup/Notas machine.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Notas machine"
-            }
-          },
-          {
-            "id": "4cbf170faf46cfba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notas.md",
+                "file": "Enumeration/DNS - 53.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notas"
-            }
-          },
-          {
-            "id": "bb47d64542105a33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/Linux/Network.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Network"
-            }
-          },
-          {
-            "id": "a839cf23e21c10a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Explotation/Reverse shell.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Reverse shell"
-            }
-          },
-          {
-            "id": "10f47177276e6291",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "notas"
-            }
-          },
-          {
-            "id": "25d60efa864183fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Explotation/Reverse shell.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Reverse shell"
-            }
-          },
-          {
-            "id": "ff00e03c76c80279",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Enumeration/MYSQL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MYSQL"
-            }
-          },
-          {
-            "id": "7e62b4f105642cef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "writeup/Notas machine.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notas machine"
+              "title": "DNS - 53"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -156,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "53",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -289,37 +188,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "7e62b4f105642cef",
+  "active": "1b2b3a7e1b9a60fb",
   "lastOpenFiles": [
-    "Explotation/Web Attack/SSRF.md",
-    "Explotation/Web Attack/SSTI.md",
+    "Enumeration/imgs/Pasted image 20261004155412.png",
+    "Explotation/Web Attack/XXE.md",
+    "Enumeration/NMAP.md",
+    "CJCA/Network Foundations/Network Communication and Addressing.md",
+    "OS/Linux/Network.md",
+    "CJCA/Using the Metasploit Framework/MSF Components.md",
+    "CJCA/Pentest in a Nutshell/Linux Target.md",
+    "OS/Linux/Bandit/key_level26.private.md",
+    "Active Directory/Kerberos-DNS-LDAP-MSRPC-NTLM.md",
+    "CJCA/Web Requests/HTTP Fundamentals.md",
+    "CJCA/Windows Event Logs/Get-WinEvent.md",
+    "CJCA/Hacking Wordpress/Explotation.md",
+    "CJCA/Windows Event Logs/Event Tracing for Windows (ETW).md",
+    "Post-Explotation/Password attacks/Attacking LSASS.md",
+    "Post-Explotation/Password attacks/Attacking SAM, SYSTEM, and SECURITY.md",
+    "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
+    "Enumeration/DNS - 53.md",
+    "Enumeration/FTP - 21.md",
+    "Enumeration/Email.md",
+    "Enumeration/FFUF.md",
+    "writeup/Notas machine.md",
+    "File Transfer/windows.md",
+    "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
+    "Explotation/Web Attack/File Uploads.md",
+    "Enumeration/WordPress.md",
     "Enumeration/RDP.md",
     "Enumeration/imgs/Pasted image 20261002103329.png",
     "Enumeration/imgs/Pasted image 20261002102618.png",
-    "Enumeration/Windows Remote Management Protocols.md",
-    "writeup/Notas machine.md",
-    "notas.md",
-    "Post-Explotation/Password attacks/Password attacks.md",
-    "Enumeration/MYSQL.md",
-    "CISCO - Ethical Hacker.md",
     "cyber_apocalypse_ctf_2026.pdf",
-    "Post-Explotation/VPN Tunneling.md",
-    "OS/Linux/Linux permissions.md",
-    "OS/Linux/Network.md",
-    "Explotation/Reverse shell.md",
-    "Explotation/Payloads windows.md",
-    "Explotation/Payload.md",
-    "Enumeration/MSSQL - SQL Server.md",
-    "Enumeration/IMPACKET.md",
-    "Enumeration/SQL server.md",
-    "Explotation/WIFI.md",
-    "CJCA/Intro to Network Traffict Analysis/Wireshark.md",
-    "Post-Explotation/Password attacks/Credential hunting.md",
-    "CJCA/Intro to Network Traffict Analysis/Tcpdump.md",
-    "Enumeration/WordPress.md",
-    "Enumeration/FFUF.md",
-    "Explotation/Web Attack/SQL/sqlmap.md",
-    "Explotation/Web Attack/SQL/SQLi.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Explotation/Web Attack/imgs/Pasted image 20260925125841.png",
     "Explotation/Web Attack/imgs/Pasted image 20260925125613.png",

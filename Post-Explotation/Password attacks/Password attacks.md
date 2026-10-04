@@ -108,7 +108,6 @@ MarcosV999@htb[/htb]$ cd /media/bitlockermount/; ls -la
 MarcosV999@htb[/htb]$ sudo umount /media/bitlockermount
 MarcosV999@htb[/htb]$ sudo umount /media/bitlocker
 ```
-
 #### NetExec Usage
 ```bash
 MarcosV999@htb[/htb]$ netexec <protocol> $target -u <user or userlist> -p <password or passwordlist>

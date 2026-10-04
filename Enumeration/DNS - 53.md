@@ -1,21 +1,48 @@
+```
+# Tools
+dig, nslookup, host, dnsenum, dnsrecon, theHarvester, fierce
+```
+DNS is mostly `UDP/53`, but DNS will rely on `TCP/53` more heavily as time progresses.
+The DNS service usually runs on a UDP port; however, when performing DNS zone transfer, it uses a TCP port for reliable data transmission.
 ## Payloads
-
 ```bash
 # reverse lookup
 nmap -sL -R --dns-servers 10.13.37.1 10.13.37.0/24
 dig @$target -x $target
 dig any domain.name @$target
 dig axfr domain.name @$target
-
+dig axfr @ns1.inlanefreight.htb inlanefreight.htb
+dig axfr hr.inlanefreight.htb @10.129.137.154 | grep "TXT"
+#Fierce can also be used to enumerate all DNS servers of the root domain and scan for a DNS zone transfer
+fierce --domain zonetransfer.me
+# Active DNS Enumeration
 dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
+dnsenum --enum inlanefreight.com -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt
+dnsenum --dnsserver 10.129.129.73 --enum inlanefreight.htb -f /usr/share/seclists/Discovery/DNS/namelist.txt
+dnsenum --dnsserver 10.129.129.73 --enum inlanefreight.htb -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt 
+puredns ..................# still not used
+# Pasive DNS Enumeration
+subfinder -d inlanefreight.com -v
+findomain ................# still not used
+```
 
-## Sub-domain Fuzzing
-dnsenum --enum inlanefreight.com -f  /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt 
+Using the `nslookup` or `host` command, we can enumerate the `CNAME` records for those subdomains.
+```bash
+MarcosV999@htb[/htb]$ host support.inlanefreight.com
+support.inlanefreight.com is an alias for inlanefreight.s3.amazonaws.com
 ```
-## Tools
-```
-dig, nslookup, host, dnsenum, dnsrecon, theHarvester, fierce
-```
+## Subdomain takeover vulnerability - important
+`Domain takeover` is registering a non-existent domain name to gain control over another domain. If attackers find an expired domain, they can claim that domain to perform further attacks such as hosting malicious content on a website or sending a phishing email leveraging the claimed domain.
+Domain takeover is also possible with subdomains called `subdomain takeover`. A DNS's canonical name (`CNAME`) record is used to map different domains to a parent domain. Many organizations use third-party services like AWS, GitHub, Akamai, Fastly, and other content delivery networks (CDNs) to host their content. In this case, they usually create a subdomain and make it point to those services. 
+![](Pasted%20image%2020261004155412.png)
+The `support` subdomain has an alias record pointing to an AWS S3 bucket. However, the URL `https://support.inlanefreight.com` shows a `NoSuchBucket` error indicating that the subdomain is potentially vulnerable to a subdomain takeover. Now, we can take over the subdomain by creating an AWS S3 bucket with the same subdomain name.
+The [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) repository is also an excellent reference for a subdomain takeover vulnerability. It shows whether the target services are vulnerable to a subdomain takeover and provides guidelines on assessing the vulnerability.
+## DNS Spoofing
+DNS spoofing is also referred to as DNS Cache Poisoning.  Example attack paths::
+- An attacker could intercept the communication between a user and a DNS server to route the user to a fraudulent destination instead of a legitimate one by performing a Man-in-the-Middle (`MITM`) attack.
+- Exploiting a vulnerability found in a DNS server could yield control over the server by an attacker to modify the DNS records.
+#### Local DNS Cache Poisoning
+From a local network perspective, an attacker can also perform DNS Cache Poisoning using MITM tools like [Ettercap](https://www.ettercap-project.org/) or [Bettercap](https://www.bettercap.org/).
 
 | **DNS Record** | **Description**                                                                                                                                                                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,28 +58,21 @@ All DNS servers work with three different types of configuration files:
 1. local DNS configuration files
 2. zone files
 3. reverse name resolution files
-
 The DNS server [Bind9](https://www.isc.org/bind/) is very often used on Linux-based distributions. Its local configuration file (`named.conf`) is roughly divided into two sections, firstly the options section for general settings and secondly the zone entries for the individual domains. The local configuration files are usually:
 - `named.conf.local`
 - `named.conf.options`
 - `named.conf.log`
 
 `Fully Qualified Domain Name` (`FQDN`)
-SecurityTrails provides a short [list](https://web.archive.org/web/20250329174745/https://securitytrails.com/blog/most-popular-types-dns-attacks) of the most popular attacks on DNS servers.
+_*SecurityTrails provides a short [list](https://web.archive.org/web/20250329174745/https://securitytrails.com/blog/most-popular-types-dns-attacks) of the most popular attacks on DNS servers*_
 ## Footprinting the Service
 We do this using the NS record and the specification of the DNS server we want to query using the `@` character. This is because if there are other DNS servers, we can also use them and query the records. However, other DNS servers may be configured differently and, in addition, may be permanent for other zones.
-#### DIG - NS Query
 ```shell
+# NS Query
 dig ns inlanefreight.htb @$target
-```
-#### DIG - Version Query
-Sometimes it is also possible to query a DNS server's version using a class CHAOS query and type TXT. However, this entry must exist on the DNS server.
-```bash$
+# Version Query
 dig CH TXT version.bind $target
-```
-#### DIG - ANY Query
-We can use the option `ANY` to view all available records. This will cause the server to show us all available entries that it is willing to disclose. It is important to note that not all entries from the zones will be shown.
-```shell
+# ANY Query
 dig any inlanefreight.htb @$target
 ```
 
@@ -82,7 +102,6 @@ Many different tools can be used for this, and most of them work in the same way
 ```shell
 dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
 ```
-
 # Footprinting Lab - Easy
 ```
 nmap -A 10.129.141.200
@@ -96,7 +115,6 @@ Students need to run `dnsenum` on `internal.inlanefreight.htb`, finding the subd
 ```shell
 dnsenum --dnsserver $target --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/seclists/Discovery/DNS/subdomains-spanish.txt inlanefreight.htb
 ```
-
 ## Groping DNS
 ```
 MarcosV999@htb[/htb]$ dig google.com
