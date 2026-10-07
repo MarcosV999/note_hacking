@@ -11,6 +11,8 @@ mysql -u root -h 10.129.14.132
 mysql -u root -pP4SSw0rd -h 10.129.14.128
 mysql -u root -pP4SSw0rd -h 10.129.14.128 --ssl-verify-server-cert=0
 mysql -u craftuser -pCraftDB_pw_2026 -h 0.0.0.0
+# secure_file_priv - finding it to be empty, therefore, files can be read and written
+show variables like "secure_file_priv"; 
 ```
 
 ```

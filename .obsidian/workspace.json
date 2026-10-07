@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Enumeration/DNS - 53.md",
+                "file": "Explotation/Web Attack/Web Cache Deception.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DNS - 53"
+              "title": "Web Cache Deception"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "53",
+                "query": "3389",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.18488693237305
+    "width": 290.18488693237305,
+    "collapsed": true
   },
   "right": {
     "id": "a65e522ddcd7bca6",
@@ -190,35 +191,36 @@
   },
   "active": "1b2b3a7e1b9a60fb",
   "lastOpenFiles": [
+    "Explotation/Web Attack/imgs/Pasted image 20261006145533.png",
+    "Explotation/Web Attack/SSRF.md",
+    "Explotation/Web Attack/Web Cache Deception.md",
+    "Explotation/Web Attack/File Uploads.md",
+    "Explotation/Web Attack/File Inclusions.md",
+    "OS/Linux/Tools deprecated.md",
+    "OS/Linux/Default Configuration.md",
+    "README.md",
+    "Ideas de proyectos.md",
+    "Protocolos and Terminology.md",
+    "CISCO - Ethical Hacker.md",
+    "notas.md",
+    "cyber_apocalypse_ctf_2026.pdf",
+    "Enumeration/Email.md",
+    "Enumeration/RDP - 3389.md",
+    "Enumeration/SMB - 445.md",
+    "writeup/Notas machine.md",
+    "Enumeration/MSSQL - SQL Server - 1433.md",
+    "Enumeration/SMTP - 25.md",
+    "Enumeration/FTP - 21.md",
+    "Enumeration/IMAP 143 - POP3 110.md",
+    "Enumeration/DNS - 53.md",
+    "Enumeration/SSH - 22.md",
+    "Enumeration/MYSQL - 3306.md",
+    "Enumeration/Oracle TNS.md",
+    "Enumeration/IMPACKET.md",
     "Enumeration/imgs/Pasted image 20261004155412.png",
     "Explotation/Web Attack/XXE.md",
-    "Enumeration/NMAP.md",
-    "CJCA/Network Foundations/Network Communication and Addressing.md",
-    "OS/Linux/Network.md",
-    "CJCA/Using the Metasploit Framework/MSF Components.md",
-    "CJCA/Pentest in a Nutshell/Linux Target.md",
-    "OS/Linux/Bandit/key_level26.private.md",
-    "Active Directory/Kerberos-DNS-LDAP-MSRPC-NTLM.md",
-    "CJCA/Web Requests/HTTP Fundamentals.md",
-    "CJCA/Windows Event Logs/Get-WinEvent.md",
-    "CJCA/Hacking Wordpress/Explotation.md",
-    "CJCA/Windows Event Logs/Event Tracing for Windows (ETW).md",
-    "Post-Explotation/Password attacks/Attacking LSASS.md",
-    "Post-Explotation/Password attacks/Attacking SAM, SYSTEM, and SECURITY.md",
-    "Post-Explotation/Password attacks/Attacking Windows Credential Manager.md",
-    "Enumeration/DNS - 53.md",
-    "Enumeration/FTP - 21.md",
-    "Enumeration/Email.md",
-    "Enumeration/FFUF.md",
-    "writeup/Notas machine.md",
-    "File Transfer/windows.md",
-    "Post-Explotation/Password attacks/Attacking Active Directory and NTDS.dit.md",
-    "Explotation/Web Attack/File Uploads.md",
-    "Enumeration/WordPress.md",
-    "Enumeration/RDP.md",
     "Enumeration/imgs/Pasted image 20261002103329.png",
     "Enumeration/imgs/Pasted image 20261002102618.png",
-    "cyber_apocalypse_ctf_2026.pdf",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Explotation/Web Attack/imgs/Pasted image 20260925125841.png",
     "Explotation/Web Attack/imgs/Pasted image 20260925125613.png",
@@ -227,7 +229,6 @@
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915160014.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155945.png",
     "Post-Explotation/Password attacks/imgs/Pasted image 20260915155940.png",
-    "Post-Explotation/Password attacks/imgs/Pasted image 20260915154107.png",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
     "Post-Explotation/Privilage Escalation",

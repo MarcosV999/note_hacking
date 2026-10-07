@@ -1,3 +1,4 @@
+
 ```
 PORT     STATE SERVICE       VERSION
 135/tcp  open  msrpc         Microsoft Windows RPC
@@ -41,7 +42,7 @@ http://10.129.8.151:8443/api/status
 |Username|KioskUser|
 |Password|K!0sk2026#|
 
-	|Serial|NX-TP-2024-0042|
+|Serial|NX-TP-2024-0042|
 |Username|KioskUser 
 |Password|K!0sk2026# 
 ```
