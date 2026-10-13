@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Explotation/Web Attack/JWT attacks.md",
+                "file": "Explotation/Web Attack/Web cache poisoning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JWT attacks"
+              "title": "Web cache poisoning"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "3389",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -190,6 +190,12 @@
   },
   "active": "1b2b3a7e1b9a60fb",
   "lastOpenFiles": [
+    "Explotation/Web Attack/HTTP Host header.md",
+    "Explotation/Web Attack/Web cache poisoning.md",
+    "Explotation/Web Attack/imgs/Pasted image 20261013134426.png",
+    "Explotation/Web Attack/imgs/Pasted image 20261013134403.png",
+    "Explotation/Web Attack/imgs/Pasted image 20261013124558.png",
+    "Explotation/Web Attack/JWT attacks.md",
     "Explotation/Web Attack/imgs/Pasted image 20261011220147.png",
     "Explotation/Web Attack/imgs/Pasted image 20261011220048.png",
     "Explotation/Web Attack/imgs/Pasted image 20261011213614.png",
@@ -198,12 +204,7 @@
     "Explotation/Web Attack/imgs/Pasted image 20261011210118.png",
     "Explotation/Web Attack/imgs/Pasted image 20261011182539.png",
     "Explotation/Web Attack/Business logic vulnerabilities.md",
-    "Explotation/Web Attack/JWT attacks.md",
     "Explotation/Web Attack/Race Condition.md",
-    "Explotation/Web Attack/imgs/Pasted image 20261009184553.png",
-    "Explotation/Web Attack/imgs/Pasted image 20261009184441.png",
-    "Explotation/Web Attack/imgs/Pasted image 20261009184423.png",
-    "Explotation/Web Attack/imgs/Pasted image 20261009160625.png",
     "Explotation/Web Attack/SQL/NoSQLi.md",
     "Explotation/Web Attack/SQL/Untitled.md",
     "Explotation/Web Attack/SQL/SQLi.md",
@@ -226,7 +227,6 @@
     "Enumeration/RDP - 3389.md",
     "Enumeration/SMB - 445.md",
     "writeup/Notas machine.md",
-    "Enumeration/MSSQL - SQL Server - 1433.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
