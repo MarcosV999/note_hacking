@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Explotation/Web Attack/Websocket.md",
+                "file": "Explotation/Web Attack/Clickjacking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Websocket"
+              "title": "Clickjacking"
             }
           }
         ]
@@ -190,9 +190,11 @@
   },
   "active": "a1ed4f8467897396",
   "lastOpenFiles": [
+    "Explotation/Web Attack/imgs/Pasted image 20261020110710.png",
+    "Explotation/Web Attack/Websocket.md",
+    "Explotation/Web Attack/Clickjacking.md",
     "Explotation/Web Attack/imgs/Pasted image 20261019220357.png",
     "Explotation/Web Attack/CSRF.md",
-    "Explotation/Web Attack/Websocket.md",
     "Explotation/Web Attack/imgs/Pasted image 20261019161309.png",
     "Explotation/Web Attack/CORS.md",
     "Active Directory/Terminology.md",
@@ -213,7 +215,6 @@
     "Explotation/Web Attack/imgs/Pasted image 20261014164840.png",
     "Explotation/Web Attack/Web cache poisoning.md",
     "Explotation/Web Attack/imgs/Pasted image 20261014155648.png",
-    "Explotation/Web Attack/imgs/Pasted image 20261014155631.png",
     "Explotation/Web Attack/HTTP Host header.md",
     "Explotation/Web Attack/JWT attacks.md",
     "Explotation/Web Attack/Business logic vulnerabilities.md",
@@ -226,7 +227,6 @@
     "Explotation/Web Attack/SSTI.md",
     "Explotation/Web Attack/Web Cache Deception.md",
     "Explotation/Web Attack/SSRF.md",
-    "Explotation/Web Attack/File Uploads.md",
     "Post-Explotation/Password attacks/Password Attacks - cheatsheet.pdf",
     "Post-Explotation/Password attacks/imgs",
     "Post-Explotation/Password attacks",
