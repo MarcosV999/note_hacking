@@ -26,3 +26,14 @@ sudo ip route del 10.13.37.0/24 dev tun0
 listener_add --addr 0.0.0.0:3333 --to 127.0.0.1:3333
 listener_add --addr 0.0.0.0:4444 --to 127.0.0.1:4444
 ```
+
+## Meterpreter
+```bash
+meterpreter> run autoroute -s IP
+meterpreter> bg
+# identified other hosts in the subnet
+> use auxiliary/scanner/portscan/tcp
+> set rhosts IP/24
+> set ports 21,22,80,8080,3389
+> run
+```

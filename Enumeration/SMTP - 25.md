@@ -3,10 +3,12 @@
 Thunderbird, Claws, Geary, MailSpring, mutt, mailutils, sendEmail, 	swaks, sendmail
 ```
 We can use tools such as `host` or `dig` and online websites such as [MXToolbox](https://mxtoolbox.com/) to query information about the MX records:
-```
+```bash
 host -t MX hackthebox.eu
 host -t A mail1.inlanefreight.htb.
 dig mx inlanefreight.com | grep "MX" | grep -v ";"
+# msfconsole
+> use scanner/smtp/smtp_enum
 ```
 SMTP Encrypted - 465  /  SMTP Encrypted/STARTTLS - 587
 

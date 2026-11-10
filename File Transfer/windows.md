@@ -187,6 +187,14 @@ Running without configuration file.
 10:02:53.949 - WARNING : App wsgidav.mw.cors.Cors(None).is_disabled() returned True: skipping.
 ```
 
+```
+sudo impacket-smbserver \
+  -smb2support \
+  -username touch \
+  -password 'TouchShare!42' \
+  loot \
+  /home/kali/Desktop/HTB/Touch/loot
+```
 #### Connecting to the Webdav Share
 ```
 C:\htb> dir \\192.168.49.128\DavWWWRoot

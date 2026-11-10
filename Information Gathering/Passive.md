@@ -15,7 +15,7 @@ BuilthWith
 # file search engine
 robots.txt
 sitemap.xml
-sitemap.xml
+sitemaps.xml
 # web
 HTTrack
 Netcraft
